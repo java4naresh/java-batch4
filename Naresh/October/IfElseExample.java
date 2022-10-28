@@ -23,5 +23,15 @@ class IfElseExample
 		} else {
 		System.out.println("Invalid");
 		}
+
+        // find out given year is leap year or not
+		int year = 2021;//2020%4 == 0
+		
+		if(year % 4 == 0) {
+		System.out.println(year+ " is Leap Year");
+		} else {
+		System.out.println(year + " is Non Leap Year");
+		}
+
 	}
 }
