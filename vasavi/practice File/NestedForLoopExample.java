@@ -7,7 +7,7 @@ class NestedForLoopExample
 			if(j<=i)
 		     System.out.print("*");
 		}
-        System.out.println();
+         System.out.println();
 		}
 
 		/*for(int i=1; i<=5; i++) {//1 2
@@ -29,6 +29,8 @@ class NestedForLoopExample
 			if(i<j) System.out.print(" "); // 1<5 2<5 3<5 4<5 5<5 2<5 3<5 4<5 5<5
 			else System.out.print("*");
 		}
+                
+                 
         System.out.println();
 		}*/
 
