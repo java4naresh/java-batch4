@@ -32,14 +32,22 @@ class NestedForLoopExample2
         System.out.println();
 		}*/
 
-		for(int i=1; i<=5; i++) {//
-		for(int j=1; j<=5; j++) {//
-			if(j<i) System.out.print(" "); // 1 < 2 2 < 2
-			else System.out.print("*");
+		for(int i=5; i>=1; i--) {//
+		for(int j=5; j>=1; j--) {//
+			if(j<=i) System.out.print("*"); // 1 < 2 2 < 2
+			else System.out.print(" ");
+		}
+		System.out.print("\b");
+		for(int j=1; j<=i; j++) {//1 1<=5 2<=5 3<=5 4<=5 5<=5 6<=5 1<=4 2<=4 3<=4 4<=4 5<=4
+		     System.out.print("*");
 		}
         System.out.println();
 		}
 
-
+      /*System.out.print("Naresh");
+      //System.out.print("\b");
+	  //System.out.print("\n");
+	  //System.out.print("\t");
+      System.out.print("Kambala");*/
 	}
 }
