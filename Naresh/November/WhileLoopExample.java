@@ -8,7 +8,9 @@ class WhileLoopExample
 		System.out.println(i++);
 		}*/
 
-		int num = 767;
+
+        for(int i=1; i<=1000; i++) {
+		int num = i;
 		int temp = num;
         int rev = 0;//5 
 		while(num != 0) {
@@ -17,12 +19,14 @@ class WhileLoopExample
 		rev = (rev * 10) + rem;//5 56 563
 		}
 
-        System.out.println(temp);
-        System.out.println(rev);
+        //System.out.println(temp);
+        //System.out.println(rev);
 		if(temp == rev) {
-		System.out.println("Polindrome");
+		System.out.println("Polindrome"+temp);
 		} else {
-		System.out.println("Not Polindrome");
+		System.out.println("Not Polindrome"+temp);
+		}
+
 		}
 	}
 }
