@@ -1,16 +1,16 @@
 class MinandMax{
-   public int[] MM(int[] numbers){  
+   public int MM(int[] numbers){  
 
      int maxNumber = Integer.MIN_VALUE;
      //int maxNumber = 0;
      for(int i = 0; i < numbers.length; i++){
      if(maxNumber < numbers[i]) maxNumber = numbers[i];
     }
-   return numbers;
+   return maxNumber;
   }
  public static void main(String[] args){
       MinandMax me = new MinandMax();
-      int[] MM = me.MM(new int[]{4,6,8,10,12,14});
+      int MM = me.MM(new int[]{4,6,8,10,12,14});
       System.out.println(MM);
   }
 }
