@@ -19,12 +19,25 @@ class StaticAndNonStatic
   public StaticAndNonStatic() {
   System.out.println("Constructor");
   }
+
+  public void method1() {
+  System.out.println(num2);
+  
+  }
+
+  public static void method2() {
+  System.out.println(num1);
+  }
+
+  public void method3() {
+   System.out.println(num1);
+  }
   
   
 
    public static void main(String[] args)
    {
-     StaticAndNonStatic.num1 = 20;
+     /*StaticAndNonStatic.num1 = 20;
      System.out.println("Main Method");
      StaticAndNonStatic sas = new StaticAndNonStatic();
      sas.num2 = 30;
@@ -46,8 +59,12 @@ class StaticAndNonStatic
      sas.num5 = 70;
      System.out.println(sas.num1+" "+sas.num2+" "+sas.num3+" "+sas.num4+" "+sas.num5);//20 30 40 50 70
      StaticAndNonStatic sas7 = new StaticAndNonStatic();
-     System.out.println(sas7.num1+" "+sas7.num2+" "+sas7.num3+" "+sas7.num4+" "+sas7.num5);//20 0 0 0 0
-
+     System.out.println(sas7.num1+" "+sas7.num2+" "+sas7.num3+" "+sas7.num4+" "+sas7.num5);//20 0 0 0 0*/
+     StaticAndNonStatic sans = new StaticAndNonStatic();
+	 sans.num2 = 20;
+     sans.method1();//20
+	 StaticAndNonStatic sans2 = new StaticAndNonStatic();
+	 sans2.method1();//0
    }
 
 }
