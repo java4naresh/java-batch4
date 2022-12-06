@@ -5,6 +5,10 @@ class  AppointmentManagement
 	String timeSlot;
 	String outTime;
       public AppointmentManagement(String date, String inTime, String timeSlot, String outTime) {
+      this.date = date;
+	this.inTime = inTime;
+	this.timeSlot = timeSlot;
+	this.outTime = outTime;
 }
 	
 }
@@ -83,14 +87,14 @@ class StaffManagement extends FacilityManagement
 class HospitalManagement
 {
 	public static void main(String[] args){
-		/*System.out.println("Appointment Mangement");
+		System.out.println("Appointment Mangement");
 		System.out.println("Patient 1");
 		AppointmentManagement am = new AppointmentManagement("01-12-2022", "10:30AM", "11:15AM", "12:10PM");
 		System.out.println(am.date+ " " +am.inTime+ " " +am.timeSlot+ " " +am.outTime);
             System.out.println("Patient 2");
 		AppointmentManagement am2 = new AppointmentManagement("04-12-2022", "12:30PM", "01:30PM", "04:10PM");
 		System.out.println(am2.date+ " " +am2.inTime+ " " +am2.timeSlot+ " " +am2.outTime);
-		System.out.println("-----------------");*/
+		System.out.println("-----------------");
 
 		System.out.println("Patient Mangement");
 		System.out.println("Patient 1");
