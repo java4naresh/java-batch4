@@ -2,10 +2,13 @@ package abstraction;
 
 public interface Bank {
 	
-    public void personalLoan();
+	String governarName = "Shakthi Kanth Das";
+	
+	public void personalLoan();
 	
 	public void homeLoan();
 	
 	public void goldLoan();
 
 }
+
