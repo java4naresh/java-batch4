@@ -9,6 +9,7 @@ public class IndianBank implements Bank  {
 		System.out.println("interestRate="+interestRate+"gst="+gst+" processingFee="+processingFee);
 	}
 
+	
 	public void studentLoan() {
 		double interestRate = 9.4;
 		double gst = 1.0;
@@ -23,4 +24,5 @@ public class IndianBank implements Bank  {
 		System.out.println("interestRate="+interestRate+"gst="+gst+" processingFee="+processingFee);
 	}
 
+	
 }
