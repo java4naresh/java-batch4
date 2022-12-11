@@ -6,6 +6,7 @@ public class ICICIBank extends RBI {
 		super(manager);
 	}
 
+
 	@Override
 	public void vehicleLoan() {
 		System.out.println(8.5);
