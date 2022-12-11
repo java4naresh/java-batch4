@@ -7,9 +7,9 @@ import abstraction.RBI;
 public class AbstractClassClient {
 
 	public static void main(String[] args) {
-		RBI rbi = new ICICIBank();
+		RBI rbi = new ICICIBank("vasavi");
 		rbi.vehicleLoan();
-		RBI rbi2 = new KotakBank();
+		RBI rbi2 = new KotakBank("vasavi");
 		rbi2.vehicleLoan();
 	}
 }
