@@ -2,24 +2,24 @@ package encapsulation;
 
 public class Customer {
 	
-private int customerId;
+	private int customerId;
 	
 	private String customerName;
 	
-	private int custAge;
+	private int custoAge;
 	
 	private long aadharNo;
 
-	public Customer(int customerId, String customerName, int custAge, long aadharNo) {
+	public Customer(int customerId, String customerName, int custoAge, long aadharNo) {
 		super();
 		this.customerId = customerId;
 		this.customerName = customerName;
-		this.custAge = custAge;
+		this.custoAge = custoAge;
 		this.aadharNo = aadharNo;
 	}
 	
 	public Customer() {
-		
+		 
 	}
 
 	public int getCustomerId() {
@@ -38,12 +38,12 @@ private int customerId;
 		this.customerName = customerName;
 	}
 
-	public int getCustAge() {
-		return custAge;
+	public int getCustoAge() {
+		return custoAge;
 	}
 
-	public void setCustAge(int custAge) {
-		this.custAge = custAge;
+	public void setCustoAge(int custoAge) {
+		this.custoAge = custoAge;
 	}
 
 	public long getAadharNo() {
@@ -56,9 +56,19 @@ private int customerId;
 
 	@Override
 	public String toString() {
-		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", custAge=" + custAge
+		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", custoAge=" + custoAge
 				+ ", aadharNo=" + aadharNo + "]";
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		Customer cust = (Customer)obj;
+		if(this.aadharNo == cust.getAadharNo() && this.customerId == cust.getCustomerId())
+			return true;
+		else return false;
+		
+	}
+	
+
 
 }
