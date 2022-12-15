@@ -12,6 +12,7 @@ public class CustomerClient {
         System.out.println(customer.getCustAge());
         System.out.println(customer.getCustomerId());
         System.out.println(customer.toString());
+        System.out.println(customer.hashCode());
         System.out.println("-----------------------------------");
         
         Customer customer2 = new Customer(2, "Gnana Vikas", 1, 456714728, "0987654321");
@@ -22,6 +23,7 @@ public class CustomerClient {
         System.out.println(customer2.getCustAge());
         System.out.println(customer2.getCustomerId());
         System.out.println(customer2.toString());
+        System.out.println(customer2.hashCode());
         System.out.println("----------------------------------");
         
 		Customer customer3 = new Customer();
@@ -36,6 +38,7 @@ public class CustomerClient {
 		System.out.println(customer3.getAadharNumber());
 		System.out.println(customer3.getPhoneNumber("0123852741"));
 		System.out.println(customer3.toString());
+		System.out.println(customer3.hashCode());
 		
 	}
 }

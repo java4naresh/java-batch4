@@ -66,7 +66,12 @@ private int customerId;
 		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", custAge=" + custAge
 				+ ", aadharNumber=" + aadharNumber + ", phoneNumber=" + phoneNumber + "]";
 	}
-
-	
-	
+ 
+    @Override	
+	public boolean equals(Object obj) {
+    	Customer cust = (Customer)obj;
+		if(this.customerId == cust.getCustomerId()&& this.customerName == cust.getCustomerName() && this.custAge == cust.getCustAge() && this.aadharNumber == cust.getAadharNumber() && this.phoneNumber == cust.getPhoneNumber(phoneNumber))
+			return true;
+		else return false;
+	}
 }
