@@ -60,5 +60,18 @@ public class Customer {
 				+ ", aadharNo=" + aadharNo + "]";
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		Customer cust = (Customer)obj;
+		if(this.aadharNo == cust.getAadharNo() && this.customerId == cust.getCustomerId())
+			return true;
+		else return false;
+	}
+	
+	/*@Override
+	public int hashCode() {
+		return (int)(customerId+aadharNo);
+	}*/
+	
 
 }
