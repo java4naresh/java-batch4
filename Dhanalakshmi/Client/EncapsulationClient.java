@@ -10,6 +10,7 @@ public class EncapsulationClient {
         customer.setCustomerName("Charanya Mannem");
         System.out.println(customer.getCustomerName());
         System.out.println(customer.toString());
+        System.out.println(customer.hashCode());
         
         Customer customer2 = new Customer();
         customer2.setCustomerId(2);
@@ -22,7 +23,9 @@ public class EncapsulationClient {
         customer3.setCustomerId(3);
         customer3. setCustomerName("Dhana");
         System.out.println(customer3.getCustoAge());
-        System.out.println(customer3.toString());
+        
+        System.out.println(customer3);
+        System.out.println(customer3.hashCode());
         
 	}
 
