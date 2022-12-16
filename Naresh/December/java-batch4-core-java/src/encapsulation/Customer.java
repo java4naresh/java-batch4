@@ -63,7 +63,7 @@ public class Customer {
 	@Override
 	public boolean equals(Object obj) {
 		Customer cust = (Customer)obj;
-		if(this.aadharNo == cust.getAadharNo() && this.customerId == cust.getCustomerId())
+		if(this.aadharNo == cust.getAadharNo() && this.customerId == cust.getCustomerId() && this.customerName.equals(cust.getCustomerName()))
 			return true;
 		else return false;
 	}
