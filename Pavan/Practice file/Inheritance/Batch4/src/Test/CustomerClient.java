@@ -36,7 +36,7 @@ public class CustomerClient {
 		System.out.println(customer3.getCustomerName());
 		System.out.println(customer3.getCustAge());
 		System.out.println(customer3.getAadharNumber());
-		System.out.println(customer3.getPhoneNumber("0123852741"));
+		System.out.println(customer3.getPhoneNumber(null));
 		System.out.println(customer3.toString());
 		System.out.println(customer3.hashCode());
 		

@@ -70,7 +70,7 @@ private int customerId;
     @Override	
 	public boolean equals(Object obj) {
     	Customer cust = (Customer)obj;
-		if(this.customerId == cust.getCustomerId()&& this.customerName == cust.getCustomerName() && this.custAge == cust.getCustAge() && this.aadharNumber == cust.getAadharNumber() && this.phoneNumber == cust.getPhoneNumber(phoneNumber))
+		if(this.customerId == cust.getCustomerId()&& this.customerName.equals(cust.getCustomerName()) && this.custAge == cust.getCustAge() && this.aadharNumber == cust.getAadharNumber() && this.phoneNumber.equals(cust.getPhoneNumber(phoneNumber)))
 			return true;
 		else return false;
 	}
