@@ -16,6 +16,7 @@ public class NewStringExample {
 
 	if(name == name2) System.out.println("same");
 	if(name == name3) System.out.println("same");
+	
 	name = name.intern();
 	if(name == name3) System.out.println("same");
 	
@@ -23,8 +24,12 @@ public class NewStringExample {
     System.out.println(name4.lastIndexOf("a"));//4
     
     String name5 = "dhana";
-    char ch = name5.charAt(1);
-    System.out.println(ch);//h
+    System.out.println(name5.indexOf("a"));//2
+    
+    
+    String name6 = "dhana";
+    System.out.println(name6.charAt(1));//h
+    System.out.println(name6.charAt(0));//d
     
     System.out.println(name.compareTo(name2));
     System.out.println(name.compareTo(name3));
@@ -52,6 +57,27 @@ public class NewStringExample {
 	System.out.println(a.indexOf("re"));
 	System.out.println(s.lastIndexOf("y"));
 
+    String name1 = "";
+    System.out.println(name1.isEmpty());//true
+    
+    String name7 = "dhana";
+    System.out.println(name7.length());//5
+    
+    String name8 = "dhana";
+    System.out.println(name8.startsWith("d"));//true
+    System.out.println(name8.startsWith("g"));//false
+    
+    String name9 = "DHANA";
+    System.out.println(name9.toLowerCase());//dhana
+    
+    String name10 = "dhana";
+    System.out.println(name10.toUpperCase());//DHANA
+    
+    
+    
+    
+    
+    
     
      
 	}
