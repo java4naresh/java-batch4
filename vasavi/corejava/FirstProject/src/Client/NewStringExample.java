@@ -54,13 +54,13 @@ public class NewStringExample {
 			System.out.println(s.indexOf("completed"));
 			System.out.println(a.indexOf("re"));
 			System.out.println(s.lastIndexOf("y"));
-		
-			
-			
-				
-		
-			
-			
+
+
+
+
+
+
+						
 		}
 
 }
