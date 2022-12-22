@@ -3,10 +3,10 @@ package exception;
 public class ExceptionHandilingWhileLoopExample {
 
 	public static void main(String[] args) {
-		
+		  try {
 		for(int i=1; i<=1000; i++) {
 		      int num = ;
-		      try {
+		    
 		      int temp = num;
 		      int rev = 0;
 		      while(num !=0){
@@ -21,13 +21,12 @@ public class ExceptionHandilingWhileLoopExample {
 		      } else {
 		      System.out.println("Not Polindrome" +temp);
 		      }    
-		      
-		} catch(Exception e) {
+	  }
+	  } catch(Exception e) {
 		   	 System.out.println(e.getMessage());
 	     } finally {
 	   	  System.out.println("finally");
 	     }
-	  }
 	}
 
 }

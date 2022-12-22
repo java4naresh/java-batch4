@@ -22,21 +22,41 @@ public class ExceptionHandlingExample {
 		} catch(Exception e) {
 			System.out.println(e.getMessage());
 		}*/
-		polindrome();
-		alphanumeric();
+		//polindrome(null);
+		//alphanumeric();
+		//fileNotFound();
+		
+		//NumberFormatException example
+		/*String strNumber = "123a";
+		int number = Integer.parseInt(strNumber);
+		System.out.println(number);*/
+		
+		//NullpointerException example
+		/*ExceptionHandlingExample e = null;
+		e.hashCode();*/
+		
+		//ArithmeticException
+		//int div = 10/0;
+		
+		//ArrayIndexOutOfBoundsException
+		int[] numbers = {1,2,3};
+		System.out.println(numbers[3]);
 
 	}
 	
-	public void fileNotFound() {
+	public static void fileNotFound() {
 		File f = new File("");
 		
-			FileReader fr = new FileReader(f);
+			try {
+				FileReader fr = new FileReader(f);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
 		
 	}
 	
-	public static void polindrome() {
-		//try {
-		String names="Amma Nanna Akka Anna Thammudu";
+	public static void polindrome(String names) {
+		try {
 		String arr[] = names.split(" ");
 		for(int i=0; i< arr.length; i++) {
 			StringBuffer sb =  new StringBuffer(arr[i]);
@@ -50,11 +70,12 @@ public class ExceptionHandlingExample {
 			
 			}		
 	       }
-		//} catch(Exception e) {
-		//	System.out.println(e.getMessage());
-		//} finally {
-		//	System.out.println("finally");
-		//}
+		} catch(Exception e) {
+			e.printStackTrace();
+			//System.out.println(e.toString());
+		} finally {
+			System.out.println("finally");
+		}
 	}
 	
 	public static void alphanumeric() {
