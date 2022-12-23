@@ -1,7 +1,6 @@
 package tasks;
 
 public class AlphaNumeric {
-
 	public static void main(String[] args) {
 
 		String name = "naresh123";
@@ -13,5 +12,6 @@ public class AlphaNumeric {
 			System.out.println("not a alphanumeric");
 		}
 	}
+
 
 }
