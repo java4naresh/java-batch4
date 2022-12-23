@@ -24,7 +24,7 @@ public class ExceptionHandlingExample {
 		}*/
 		//polindrome(null);
 		//alphanumeric();
-		//fileNotFound();
+		fileNotFound();
 		
 		//NumberFormatException example
 		/*String strNumber = "123a";
@@ -39,18 +39,23 @@ public class ExceptionHandlingExample {
 		//int div = 10/0;
 		
 		//ArrayIndexOutOfBoundsException
-		int[] numbers = {1,2,3};
-		System.out.println(numbers[3]);
+		//int[] numbers = {1,2,3};
+		//System.out.println(numbers[3]);
 
 	}
 	
 	public static void fileNotFound() {
-		File f = new File("");
+		File f = new File("D:\\December\\java-batch4\\Naresh\\December\\java-batch4-core-java\\src\\exception\\sample");
 		
 			try {
 				FileReader fr = new FileReader(f);
-			} catch (FileNotFoundException e) {
+			} catch(FileNotFoundException e) {
 				e.printStackTrace();
+				
+			} catch(NullPointerException npe) {
+				
+			} catch(Exception e) {
+				
 			}
 		
 	}
