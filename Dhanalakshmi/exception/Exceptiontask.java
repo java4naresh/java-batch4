@@ -7,10 +7,17 @@ import java.io.FileReader;
 public class Exceptiontask {
 
 	public void fileNotFound() throws FileNotFoundException {
-		File f = new File("");
-		
+		File f = new File("sample");
+		try {
 		FileReader fr = new FileReader(f);
+	} catch (FileNotFoundException e) {
+		e.printStackTrace();
+	} catch(NullPointerException npe) {
+		
+	} catch (Exception e) {
+		
 	}
+  }
 	public static void main(String[] args) {
 		
 		/*int[] numbers = {};
@@ -63,13 +70,10 @@ public class Exceptiontask {
 		System.out.println(numArray[0]);*/
 		
 		//NegativeArraySizeExceptionExample
-		int arr[] = new int[-1];//1
-		System.out.println(arr.length);
+		/*int arr[] = new int[-1];//1
+		System.out.println(arr.length);*/
 		
-
 		
-		    
-		     
     		
      }
 
