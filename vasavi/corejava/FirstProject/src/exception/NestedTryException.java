@@ -5,7 +5,7 @@ public class NestedTryException {
 	public static void main(String[] args) {
 		try {
 			try {
-			int num = 10 / 0;	
+			int num = 20 / 0;	
 			} catch(ArithmeticException ae) {
 				System.out.println("AE1");
 			}
