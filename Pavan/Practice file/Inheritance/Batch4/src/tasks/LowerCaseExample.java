@@ -1,7 +1,6 @@
 package tasks;
 
 public class LowerCaseExample {
-
 	public static void main(String[] args) {
 		String name = "NARESHJAVA";
 		char[] uppercasename=new char[name.length()];
