@@ -60,6 +60,7 @@ public class Customer {
 				+ ", aadharNo=" + aadharNo + "]";
 	}
 	
+	
 	@Override
 	public boolean equals(Object obj) {
 		Customer cust = (Customer)obj;
@@ -73,5 +74,8 @@ public class Customer {
 		return (int)(customerId+aadharNo);
 	}*/
 	
-
+	@Override
+	public void finalize() {
+		System.out.println("Customer GC is completed");
+	}
 }

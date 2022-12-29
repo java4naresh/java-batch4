@@ -13,7 +13,5 @@ public class Address {
 		this.street = street;
 		this.pincode = pincode;
 	}
-	
-	
 
 }
