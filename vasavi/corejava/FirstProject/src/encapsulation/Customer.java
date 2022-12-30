@@ -74,6 +74,11 @@ public class Customer {
 		return (int)(customerId+aadharNo);
 	}*/
 	
+	@Override
+	public void finalize() {
+		System.out.println(" Customer Gc is completed");
+	}
+	
 
 
 }
