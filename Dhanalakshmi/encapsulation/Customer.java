@@ -63,12 +63,16 @@ public class Customer {
 	@Override
 	public boolean equals(Object obj) {
 		Customer cust = (Customer)obj;
-		if(this.aadharNo == cust.getAadharNo() && this.customerId == cust.getCustomerId())
+		if(this.aadharNo == cust.getAadharNo() && this.customerId == cust.getCustomerId() && this.customerName == cust.getCustomerName())
 			return true;
 		else return false;
 		
 	}
 	
+	@Override
+	public void finalize() {
+		System.out.println("Customer GC is completed");
+	}
 
 
 }
