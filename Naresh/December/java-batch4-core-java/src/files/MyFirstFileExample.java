@@ -6,12 +6,12 @@ import java.io.IOException;
 public class MyFirstFileExample {
 
 	public static void main(String[] args) {
-		//createNewFile("sample1.txt");
-		//createFolder("sampleFiles");
+		createNewFile("E:\\sampleFiles\\sample1.txt");
+		//createFolder("E:\\sampleFiles");
 		//createFolderAndFile("sampleFiles", "sample.txt");
         //displayFolderData("sampleFiles");
 		//displayOnlyFolders("sampleFiles");
-		displayOnlyFiles("sampleFiles");
+		//displayOnlyFiles("sampleFiles");
 	}
 	
 	public static void createNewFile(String fileName) {
