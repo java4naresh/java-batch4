@@ -7,12 +7,12 @@ import java.io.IOException;
 public class FirstFileExample {
 	
 	public static void main(String[] args) {
-		createNewFile("sample1.txt");
-		createFolder("sampleFiles");
-		createFolderAndFile("sampleFiles", "sample.txt");
-        displayFolderData("sampleFiles");
-		displayOnlyFolders("sampleFiles");
-		displayOnlyFiles("sampleFiles");
+		createNewFile("E:\\sampleFiles\\sample1.txt");
+		//createFolder("E:\\sampleFiles");
+		//createFolderAndFile("sampleFiles", "sample.txt");
+        //displayFolderData("sampleFiles");
+		//displayOnlyFolders("sampleFiles");
+		//displayOnlyFiles("sampleFiles");
 	}
 	
 	public static void createNewFile(String fileName) {
