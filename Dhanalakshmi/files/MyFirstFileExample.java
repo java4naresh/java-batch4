@@ -6,8 +6,8 @@ import java.io.IOException;
 public class MyFirstFileExample {
 	
 	public static void main(String[] args) {
-		//createNewFile("sample1.txt");
-		//createFolder("sampleFiles");
+		createNewFile("C:/sampleFiles\\sample1.txt");
+		//createFolder("C:\\sampleFiles");
 		//createFolderAndFile("sampleFiles","sample.txt");
 		//displayFolderData("sampleFiles");
 		//displayOnlyFolders("sampleFiles");
