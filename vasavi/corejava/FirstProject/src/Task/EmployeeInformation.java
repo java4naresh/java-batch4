@@ -5,13 +5,13 @@ public class EmployeeInformation {
 	private int id;
 	private String FirstName;
 	private String LastName;
-	private String gender;
-	private int salary;
+	private char gender;
+	private double salary;
 	private String Dept;
 	private String City;
-	private int Experience;
 	
-	public EmployeeInformation(int id,String FirstName,String LastName,String gender,int salary,String Dept,String City,int Experience) {
+	
+	public EmployeeInformation(int id,String FirstName,String LastName,char gender,double salary,String Dept,String City) {
 		
 		this.id = id;
 		this.FirstName = FirstName;
@@ -20,7 +20,7 @@ public class EmployeeInformation {
 		this.salary = salary;
 		this.Dept = Dept;
 		this.City = City;
-		this.Experience = Experience;
+		
 	}
 
 	public int getId() {
@@ -47,19 +47,19 @@ public class EmployeeInformation {
 		LastName = lastName;
 	}
 
-	public String getGender() {
+	public char getGender() {
 		return gender;
 	}
 
-	public void setGender(String gender) {
+	public void setGender(char gender) {
 		this.gender = gender;
 	}
 
-	public  int getSalary() {
+	public  double getSalary() {
 		return salary;
 	}
 
-	public void setSalary(int salary) {
+	public void setSalary(double salary) {
 		this.salary = salary;
 	}
 
@@ -79,19 +79,12 @@ public class EmployeeInformation {
 		City = city;
 	}
 
-	public int getExperience() {
-		return Experience;
-	}
 
-	public void setExperience(int experience) {
-		Experience = experience;
-	}
 
 	@Override
 	public String toString() {
 		return "EmployeeInformation [id=" + id + ", FirstName=" + FirstName + ", LastName=" + LastName + ", gender="
-				+ gender + ", salary=" + salary + ", Dept=" + Dept + ", City=" + City + ", Experience=" + Experience
-				+ "]";
+				+ gender + ", salary=" + salary + ", Dept=" + Dept + ", City=" + City+"]";
 	}
 	
 	
