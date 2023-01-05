@@ -1,25 +1,22 @@
 package Task;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
 
+
 public class EmployeeMain {
 	
-
-	public static void main(String[] args) throws FileNotFoundException, IOException {
-		
+	public static void main(String[] args) throws IOException {
+	
 		try(FileReader fileReader = new FileReader("E:\\sampleFiles\\sample1.txt")) {
 			BufferedReader br = new BufferedReader(fileReader);
-			String line = br.readLine();
-			
-			EmployeeInformation[] persons = new EmployeeInformation[6];
-			int index = 0;
-			
+			String line = br.readLine();			
+			EmployeeInformation[] persons = new EmployeeInformation[10];
+			int index = 0;		
 			while(line != null) {
-				System.out.println(line);
+				//System.out.println(line);
 				String[] s1 = line.split(" ");
 				int id = Integer.parseInt(s1[0]);
 				String firstName = s1[1];
@@ -31,46 +28,54 @@ public class EmployeeMain {
 				
 				EmployeeInformation employee = new EmployeeInformation(id, firstName, lastName, gender,salary,dept,city);	
 					persons[index] = employee;
-					index++;
+					line = br.readLine();
+					index  ++;
 									
-				line = br.readLine();
-			}	
-								
-	   }
-	
-	
-     }
-	
-   /*public void displayCitybasedData(EmployeeInformation[] persons, String city) {
-		
-		if(persons.equals("Hyderabad")) {
-			System.out.println(persons);
-		}
-	}*/
-	
-	
-	/*public void DisplayGenderBasedData (EmployeeInformation[] employee, char gender) {
-		
-		if(employee.equals('M')) {
+			}
 			
-			System.out.println(employee);
+			//displayCityBasedData(persons, "Hyderabad");
+			
+          //displayDeptBasedData(persons, "IT");
+			
+			//displaySalaryBasedData(persons, 50000);
+			
+			displayGenderBasedData(persons, 'M');
+			
 		}
-		}*/
-	
-	public  void  DisplaysalaryBasedData(EmployeeInformation[] employee, double salary) {
-		
-		if(employee.length < 50000) {
-			System.out.println(employee);
-		}
-		
 	}
 	
+	  public static void displayGenderBasedData(EmployeeInformation[] persons, char gender) {
+		  for(EmployeeInformation employee: persons) {
+			 if(employee.getGender() == (gender)) {
+				System.out.println(employee);
+			}
+			
+		}
 	
-	
-
-	
+	/*public static void displaySalaryBasedData(EmployeeInformation[] persons, int salary) {
+		for(EmployeeInformation employee: persons) {
+			if(employee.getSalary()> (salary)) {
+				System.out.println(employee);
+			}
+		}*/
+		
+		
+		/*public static void displayDeptBasedData(EmployeeInformation[] persons, String dept) {
+			for(EmployeeInformation employee: persons) {
+				if(employee.getDept().equalsIgnoreCase(dept)) {
+					System.out.println(employee);
+				}
+			}*/
+		
+		
+		/*public static void displayCityBasedData(EmployeeInformation[] persons, String city) {
+			for(EmployeeInformation employee: persons) {
+				if(employee.getCity().equalsIgnoreCase(city)) {
+					System.out.println(employee);
+				}
+			}*/
+	}
 }
-
 	
 
 			
