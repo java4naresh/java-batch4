@@ -7,23 +7,23 @@ public class EmployeeInformation {
 	private String LastName;
 	private char gender;
 	private double salary;
-	private String Dept;
-	private String City;
+	private String dept;
+	private String city;
 	
 	
-	public EmployeeInformation(int id,String FirstName,String LastName,char gender,double salary,String Dept,String City) {
+	public EmployeeInformation(int id,String FirstName,String LastName,char gender,double salary,String dept,String city) {
 		
 		this.id = id;
 		this.FirstName = FirstName;
 		this.LastName = LastName;
 		this.gender = gender;
 		this.salary = salary;
-		this.Dept = Dept;
-		this.City = City;
+		this.dept = dept;
+		this.city = city;
 		
 	}
 
-	public int getId() {
+	public int  getId() {
 		return id;
 	}
 
@@ -64,19 +64,19 @@ public class EmployeeInformation {
 	}
 
 	public String getDept() {
-		return Dept;
+		return dept;
 	}
 
 	public void setDept(String dept) {
-		Dept = dept;
+		dept = dept;
 	}
 
 	public String getCity() {
-		return City;
+		return city;
 	}
 
 	public void setCity(String city) {
-		City = city;
+		city = city;
 	}
 
 
@@ -84,7 +84,7 @@ public class EmployeeInformation {
 	@Override
 	public String toString() {
 		return "EmployeeInformation [id=" + id + ", FirstName=" + FirstName + ", LastName=" + LastName + ", gender="
-				+ gender + ", salary=" + salary + ", Dept=" + Dept + ", City=" + City+"]";
+				+ gender + ", salary=" + salary + ", Dept=" + dept + ", City=" + city+"]";
 	}
 	
 	
