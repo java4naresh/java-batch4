@@ -4,91 +4,108 @@ package tasks;
 		public class EmployeeInfo {
 
 			private int id;
-			private String FirstName;
-			private String LastName;
+			
+			private String firstName;
+			
+			private String lastName;
+			
 			private char gender;
+			
+			private String dept;
+			
 			private double salary;
-			private String Dept;
-			private String City;
+			
+			private String city;
 			
 			
-			public EmployeeInfo(int id,String FirstName,String LastName,char gender,double salary,String Dept,String City) {
-				
+			public EmployeeInfo(int id, String firstName, String lastName, char gender, String dept, double salary,
+					String city) {
+				super();
 				this.id = id;
-				this.FirstName = FirstName;
-				this.LastName = LastName;
+				this.firstName = firstName;
+				this.lastName = lastName;
 				this.gender = gender;
+				this.dept = dept;
 				this.salary = salary;
-				this.Dept = Dept;
-				this.City = City;
-				
+				this.city = city;
 			}
+
 
 			public int getId() {
 				return id;
 			}
 
+
 			public void setId(int id) {
 				this.id = id;
 			}
 
+
 			public String getFirstName() {
-				return FirstName;
+				return firstName;
 			}
+
 
 			public void setFirstName(String firstName) {
-				FirstName = firstName;
+				this.firstName = firstName;
 			}
+
 
 			public String getLastName() {
-				return LastName;
+				return lastName;
 			}
 
+
 			public void setLastName(String lastName) {
-				LastName = lastName;
+				this.lastName = lastName;
 			}
+
 
 			public char getGender() {
 				return gender;
 			}
 
+
 			public void setGender(char gender) {
 				this.gender = gender;
 			}
 
-			public  double getSalary() {
+
+			public String getDept() {
+				return dept;
+			}
+
+
+			public void setDept(String dept) {
+				this.dept = dept;
+			}
+
+
+			public double getSalary() {
 				return salary;
 			}
+
 
 			public void setSalary(double salary) {
 				this.salary = salary;
 			}
 
-			public String getDept() {
-				return Dept;
-			}
-
-			public void setDept(String dept) {
-				Dept = dept;
-			}
 
 			public String getCity() {
-				return City;
+				return city;
 			}
+
 
 			public void setCity(String city) {
-				City = city;
+				this.city = city;
 			}
-
 
 
 			@Override
 			public String toString() {
-				return "EmployeeInformation [id=" + id + ", FirstName=" + FirstName + ", LastName=" + LastName + ", gender="
-						+ gender + ", salary=" + salary + ", Dept=" + Dept + ", City=" + City+"]";
+				return "EmployeeInfo [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", gender="
+						+ gender + ", dept=" + dept + ", salary=" + salary + ", city=" + city + "]";
 			}
 			
-			
-			
-			
+					
 }
