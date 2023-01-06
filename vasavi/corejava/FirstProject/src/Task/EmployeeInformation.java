@@ -2,7 +2,7 @@ package Task;
 
 public class EmployeeInformation {
 
-	private int id;
+	private double id;
 	private String FirstName;
 	private String LastName;
 	private char gender;
@@ -11,7 +11,7 @@ public class EmployeeInformation {
 	private String city;
 	
 	
-	public EmployeeInformation(int id,String FirstName,String LastName,char gender,double salary,String dept,String city) {
+	public EmployeeInformation(double id,String FirstName,String LastName,char gender,double salary,String dept,String city) {
 		
 		this.id = id;
 		this.FirstName = FirstName;
@@ -23,11 +23,11 @@ public class EmployeeInformation {
 		
 	}
 
-	public int  getId() {
+	public double  getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(double id) {
 		this.id = id;
 	}
 

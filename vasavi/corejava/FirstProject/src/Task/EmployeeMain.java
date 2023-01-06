@@ -3,6 +3,7 @@ package Task;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 
 
@@ -30,52 +31,121 @@ public class EmployeeMain {
 					persons[index] = employee;
 					line = br.readLine();
 					index  ++;
-									
+			}
+		
+					takeUserInput(persons);
+			}
+	}
+			
+			public static void takeUserInput(EmployeeInformation[] employees) {
+				Scanner sc = new Scanner(System.in);
+				System.out.println("Hello vasavi choose your option below");
+				System.out.println("For city press 1");
+				System.out.println("For gender press 2");
+				System.out.println("For dept press 3");
+				System.out.println("For salary press 4");
+				int option = sc.nextInt();
+				
+				if(option == 1) {
+					System.out.println("Enter city name:");
+					String city = sc.next();
+			        displayCityBasedData(employees, city);
+			        System.out.println("Do you want to continue:");
+			        String res = sc.next();
+			       while("yes".equalsIgnoreCase(res)) {
+			    	   System.out.println("Enter city name:");
+			   		   city = sc.next();
+			   		   displayCityBasedData(employees, city);
+			   		   System.out.println("Do you want to continue:");
+			           res = sc.next();
+			       }
+				} else if(option == 2) {
+					System.out.println("Enter gender:");
+					char gender = sc.next().charAt(0);
+					displayGenderBasedData(employees, gender);
+			        System.out.println("Do you want to continue:");
+			        String res = sc.next();
+			       while("yes".equalsIgnoreCase(res)) {
+			    	   System.out.println("Enter gender:");
+			    	   gender = sc.next().charAt(0);
+			    	   displayGenderBasedData(employees, gender);
+			   		   System.out.println("Do you want to continue:");
+			           res = sc.next();
+			       }
+				} else if(option == 3) {
+					System.out.println("Enter department:");
+					String dept = sc.next();
+					displayDeptBasedData(employees, dept);
+			        System.out.println("Do you want to continue:");
+			        String res = sc.next();
+			       while("yes".equalsIgnoreCase(res)) {
+			    	   System.out.println("Enter department:");
+			    	   dept = sc.next();
+					   displayDeptBasedData(employees, dept);
+			   		   System.out.println("Do you want to continue:");
+			           res = sc.next();
+			       }
+				} else if(option == 4) {
+					System.out.println("Enter salary:");
+					Double salary = sc.nextDouble();
+					displaySalaryBasedData(employees, salary);
+			        System.out.println("Do you want to continue:");
+			        String res = sc.next();
+			       while("yes".equalsIgnoreCase(res)) {
+			    	   System.out.println("Enter salary:");
+			    	   salary = sc.nextDouble();
+			    	   displaySalaryBasedData(employees, salary);
+			   		   System.out.println("Do you want to continue:");
+			           res = sc.next();
+			       }
+				}
+				
 			}
 			
-			//displayCityBasedData(persons, "Hyderabad");
-			
-          //displayDeptBasedData(persons, "IT");
-			
-			//displaySalaryBasedData(persons, 50000);
-			
-			displayGenderBasedData(persons, 'M');
-			
-		}
-	}
+			/**
+			 * this method will display the city based data
+			 * @param employees
+			 * @param city
+			 */
+
+
 	
 	  public static void displayGenderBasedData(EmployeeInformation[] persons, char gender) {
 		  for(EmployeeInformation employee: persons) {
 			 if(employee.getGender() == (gender)) {
 				System.out.println(employee);
 			}
+		  }
 			
 		}
 	
-	/*public static void displaySalaryBasedData(EmployeeInformation[] persons, int salary) {
+	public static void displaySalaryBasedData(EmployeeInformation[] persons,double salary) {
 		for(EmployeeInformation employee: persons) {
 			if(employee.getSalary()> (salary)) {
 				System.out.println(employee);
 			}
-		}*/
+		}
+	}
 		
 		
-		/*public static void displayDeptBasedData(EmployeeInformation[] persons, String dept) {
+		public static void displayDeptBasedData(EmployeeInformation[] persons, String dept) {
 			for(EmployeeInformation employee: persons) {
 				if(employee.getDept().equalsIgnoreCase(dept)) {
 					System.out.println(employee);
 				}
-			}*/
+			}
+		}
 		
 		
-		/*public static void displayCityBasedData(EmployeeInformation[] persons, String city) {
+		public static void displayCityBasedData(EmployeeInformation[] persons, String city) {
 			for(EmployeeInformation employee: persons) {
 				if(employee.getCity().equalsIgnoreCase(city)) {
 					System.out.println(employee);
 				}
-			}*/
-	}
+			}
+		}
 }
+
 	
 
 			
