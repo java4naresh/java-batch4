@@ -7,32 +7,36 @@ import java.io.IOException;
 public class FileTask {
 	public static void main(String[] args) throws IOException {
 		FileReader fr = new FileReader("C:\\Users\\PARDHU\\OneDrive\\Desktop\\Batch4\\Sample.txt");
-		BufferedReader br = new BufferedReader(fr);
-		String line = br.readLine();
-		EmployeeDTO[] employees = new EmployeeDTO[10];
-		int index = 0;
-		while(line != null) {
-			//System.out.println(line);
-			String[] values = line.split(" ");
-			Long id = Long.parseLong(values[0]);
-			String firstName = values[1];
-			String lastName = values[2];
-			char gender = values[3].charAt(0);
-			String dept = values[4];
-			Double salary = Double.parseDouble(values[5]);
-			String city = values[6];
-			EmployeeDTO dto = new EmployeeDTO(id, firstName, lastName, gender, dept, salary, city);
-			employees[index] = dto;
-			//System.out.println(dto);
-			line = br.readLine();
-			index ++;
+		try (BufferedReader br = new BufferedReader(fr)) {
+			String line = br.readLine();
+			EmployeeDTO[] employees = new EmployeeDTO[10];
+			int index = 0;
+			while(line != null) {
+				//System.out.println(line);
+				String[] values = line.split(" ");
+				Long id = Long.parseLong(values[0]);
+				String firstName = values[1];
+				String lastName = values[2];
+				char gender = values[3].charAt(0);
+				String dept = values[4];
+				Double salary = Double.parseDouble(values[5]);
+				String city = values[6];
+				EmployeeDTO dto = new EmployeeDTO(id, firstName, lastName, gender, dept, salary, city);
+				employees[index] = dto;
+				//System.out.println(dto);
+				line = br.readLine();
+				index ++;
+			}
+      //displayCityBasedData(employees, "Sattenapalli");
+     // displaySalaryBasedData(employees, 35000d);
+			//displayGenderBasedData(employees, 'F');
+			//displayDepartmentBasedData (employees, "Manager");
+			//displayLastNameBasedData(employees, "Kayali");
+			displayNameBasedData(employees, "Pavan");
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-       //displayCityBasedData(employees, "Sattenapalli");
-      // displaySalaryBasedData(employees, 35000d);
-		//displayGenderBasedData(employees, 'F');
-		//displayDepartmentBasedData (employees, "Manager");
-		//displayLastNameBasedData(employees, "Kayali");
-		displayNameBasedData(employees, "Pavan");
 	}
 	
 	public static void displayCityBasedData(EmployeeDTO[] employees, String city) {
