@@ -14,6 +14,9 @@ public class Office {
 		this.branch = branch;
 	}
 	
-	
+	@Override
+	public void finalize() {
+		System.out.println("Office GC is completed");
+	}
 	
 }

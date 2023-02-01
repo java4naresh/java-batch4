@@ -1,0 +1,504 @@
+Date:19-01-2023
+----------------
+
+create table tablename(fieldname...fieldtype...)
+
+
+create table employee(emp_id int, emp_name varchar(50), emp_gender char,emp_department varchar(50),
+emp_salary double(10,4), emp_company varchar(50), emp_phone int, emp_email varchar(100));
+
+
+insert into tablename (values);
+
+insert into employee values(1, 'Dhanalakshmi Mannem','F','IT',40000.00,'Amazon',995544, 
+'dhanalakshmi@gmail.com');
+ 
+
+insert into employee (emp_id, emp_name, emp_gender, emp_salary, emp_department, 
+emp_company, emp_email, emp_phone) values(2,"charanya",'F',60000.00,'Banking','sbi',
+'charanya@gmail.com',5884165);
+
+insert into employee (emp_id, emp_name, emp_gender, emp_department,emp_company)
+values(3,'Mani','M','IT','techmahindra');
+
+select * from tablename;
+select * from employee;
+select emp_id,emp_name from employee;
+select emp_gender from employee;
+select * from employee where emp_id = 1;
+select * from employee where emp_department = 'IT';
+select * from employee where emp_company = 'techmahindra';
+select * from employee where emp_email = 'dhanalakshmi@gmail.com';
+select * from employee where emp_name = 'Dhanalakshmi Mannem';
+select * from employee where emp_name = 'charanya';
+select * from employee where emp_name = 'Mani';
+
+Date : 20-01-2023
+-------------------
+
+mysql> use java_batch4;
+Database changed
+mysql> show tables;
++-----------------------+
+| Tables_in_java_batch4 |
++-----------------------+
+| employee              |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from employee;
++--------+---------------------+------------+----------------+------------+--------------+-----------+------------------------+
+| emp_id | emp_name            | emp_gender | emp_department | emp_salary | emp_company  | emp_phone | emp_email              |
++--------+---------------------+------------+----------------+------------+--------------+-----------+------------------------+
+|      1 | Dhanalakshmi Mannem | F          | IT             | 50000.0000 | Amazon       |    995544 | dhanalakshmi@gmail.com |
+|      2 | charanya            | F          | Banking        | 60000.0000 | sbi          |   5884165 | charanya@gmail.com     |
+|      3 | Mani                | F          | IT             |       NULL | techmahindra |      NULL | NULL                   |
+|      3 | Mani                | M          | IT             |       NULL | techmahindra |      NULL | NULL                   |
++--------+---------------------+------------+----------------+------------+--------------+-----------+------------------------+
+4 rows in set (0.01 sec)
+
+mysql> update employee set emp_salary = 10000.00, emp_phone = 99587, emp_email = 'mani@gmail.com' where emp_id = 3;
+Query OK, 2 rows affected (0.01 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> select * from employee;
++--------+---------------------+------------+----------------+------------+--------------+-----------+------------------------+
+| emp_id | emp_name            | emp_gender | emp_department | emp_salary | emp_company  | emp_phone | emp_email              |
++--------+---------------------+------------+----------------+------------+--------------+-----------+------------------------+
+|      1 | Dhanalakshmi Mannem | F          | IT             | 50000.0000 | Amazon       |    995544 | dhanalakshmi@gmail.com |
+|      2 | charanya            | F          | Banking        | 60000.0000 | sbi          |   5884165 | charanya@gmail.com     |
+|      3 | Mani                | F          | IT             | 10000.0000 | techmahindra |     99587 | mani@gmail.com         |
+|      3 | Mani                | M          | IT             | 10000.0000 | techmahindra |     99587 | mani@gmail.com         |
++--------+---------------------+------------+----------------+------------+--------------+-----------+------------------------+
+4 rows in set (0.00 sec)
+
+mysql> insert into employee values(3,'Mani','M','HR',60000.00,'Infosys',25489,'manihr@gmail.com');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from employee;
++--------+---------------------+------------+----------------+------------+--------------+-----------+------------------------+
+| emp_id | emp_name            | emp_gender | emp_department | emp_salary | emp_company  | emp_phone | emp_email              |
++--------+---------------------+------------+----------------+------------+--------------+-----------+------------------------+
+|      1 | Dhanalakshmi Mannem | F          | IT             | 50000.0000 | Amazon       |    995544 | dhanalakshmi@gmail.com |
+|      2 | charanya            | F          | Banking        | 60000.0000 | sbi          |   5884165 | charanya@gmail.com     |
+|      3 | Mani                | F          | IT             | 10000.0000 | techmahindra |     99587 | mani@gmail.com         |
+|      3 | Mani                | M          | IT             | 10000.0000 | techmahindra |     99587 | mani@gmail.com         |
+|      3 | Mani                | M          | HR             | 60000.0000 | Infosys      |     25489 | manihr@gmail.com       |
++--------+---------------------+------------+----------------+------------+--------------+-----------+------------------------+
+5 rows in set (0.00 sec)
+
+mysql> update employee set emp_salary = 10000.00 where emp_id = 3 and emp_department = 'HR';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update employee set emp_name = 'Varsha' where emp_id = 3 and emp_phone = 99587;
+Query OK, 2 rows affected (0.01 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> select * from employee;
++--------+---------------------+------------+----------------+------------+--------------+-----------+------------------------+
+| emp_id | emp_name            | emp_gender | emp_department | emp_salary | emp_company  | emp_phone | emp_email              |
++--------+---------------------+------------+----------------+------------+--------------+-----------+------------------------+
+|      1 | Dhanalakshmi Mannem | F          | IT             | 50000.0000 | Amazon       |    995544 | dhanalakshmi@gmail.com |
+|      2 | charanya            | F          | Banking        | 60000.0000 | sbi          |   5884165 | charanya@gmail.com     |
+|      3 | Varsha              | F          | IT             | 10000.0000 | techmahindra |     99587 | mani@gmail.com         |
+|      3 | Varsha              | M          | IT             | 10000.0000 | techmahindra |     99587 | mani@gmail.com         |
+|      3 | Mani                | M          | HR             | 10000.0000 | Infosys      |     25489 | manihr@gmail.com       |
++--------+---------------------+------------+----------------+------------+--------------+-----------+------------------------+
+5 rows in set (0.00 sec)
+
+mysql> update employee set emp_salary = 10000.00,  where emp_id = 4 and emp_department = 'HR';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where emp_id = 4 and emp_department = 'HR'' at line 1
+mysql> update employee set emp_salary = 10000.00 where emp_id = 4 and emp_department = 'HR';
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+mysql> update employee set emp_salary = 10000.00 where emp_id = 2 and emp_department = 'HR';
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+mysql> update employee set emp_salary = 10000.00
+    -> update employee set emp_salary = 10000.00;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'update employee set emp_salary = 10000.00' at line 2
+mysql> update employee set emp_salary = 50000.00;
+Query OK, 4 rows affected (0.01 sec)
+Rows matched: 5  Changed: 4  Warnings: 0
+
+mysql> delete from employee where emp_id = 3 and emp_department = 'IT';
+Query OK, 2 rows affected (0.01 sec)
+
+mysql> select * from employee;
++--------+---------------------+------------+----------------+------------+-------------+-----------+------------------------+
+| emp_id | emp_name            | emp_gender | emp_department | emp_salary | emp_company | emp_phone | emp_email              |
++--------+---------------------+------------+----------------+------------+-------------+-----------+------------------------+
+|      1 | Dhanalakshmi Mannem | F          | IT             | 50000.0000 | Amazon      |    995544 | dhanalakshmi@gmail.com |
+|      2 | charanya            | F          | Banking        | 50000.0000 | sbi         |   5884165 | charanya@gmail.com     |
+|      3 | Mani                | M          | HR             | 50000.0000 | Infosys     |     25489 | manihr@gmail.com       |
++--------+---------------------+------------+----------------+------------+-------------+-----------+------------------------+
+3 rows in set (0.00 sec)
+
+mysql> delete from employee;
+Query OK, 3 rows affected (0.00 sec)
+
+mysql> select * from employee;
+Empty set (0.00 sec)
+
+mysql> show tables;
++-----------------------+
+| Tables_in_java_batch4 |
++-----------------------+
+| employee              |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> drop table employee;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> create table employee(emp_id int,emp_name varchar(50));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> insert into employee values(1, 'Dhana');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee values(2, 'Charanya');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from employee;
++--------+----------+
+| emp_id | emp_name |
++--------+----------+
+|      1 | Dhana    |
+|      2 | Charanya |
++--------+----------+
+2 rows in set (0.00 sec)
+
+mysql> delete from employee where emp_id = 2;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from employee;
++--------+----------+
+| emp_id | emp_name |
++--------+----------+
+|      1 | Dhana    |
++--------+----------+
+1 row in set (0.00 sec)
+
+21-01-2023
+==============
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| java_batch4        |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> use java_batch4;
+Database changed
+mysql> show tables;
+Empty set (0.01 sec)
+
+mysql> create table employee (emp_id int primary key, emp_name varchar(50),emp_gender char, emp_department varchar(50), emp_salary double(10,4),emp_company varchar(50), emp_phone int, emp_email varchar(100));
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+mysql> insert into employee values(1,'Dhana','F','IT',50000.00,'Google',998125,'dhana@gmail.com');
+Query OK, 1 row affected (0.01 sec)
+
+mysql>  insert into employee values(2,'Dhana','F','IT',50000.00,'Google',998125,'dhana@gmail.com');
+Query OK, 1 row affected (0.01 sec)
+
+mysql>  insert into employee values(1,'Dhana','F','IT',50000.00,'Google',998125,'dhana@gmail.com');
+ERROR 1062 (23000): Duplicate entry '1' for key 'employee.PRIMARY'
+mysql> select * from employee;
++--------+----------+------------+----------------+------------+-------------+-----------+-----------------+
+| emp_id | emp_name | emp_gender | emp_department | emp_salary | emp_company | emp_phone | emp_email       |
++--------+----------+------------+----------------+------------+-------------+-----------+-----------------+
+|      1 | Dhana    | F          | IT             | 50000.0000 | Google      |    998125 | dhana@gmail.com |
+|      2 | Dhana    | F          | IT             | 50000.0000 | Google      |    998125 | dhana@gmail.com |
++--------+----------+------------+----------------+------------+-------------+-----------+-----------------+
+2 rows in set (0.00 sec)
+
+mysql> drop table employee;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> create table employee (emp_id int primary key, emp_name varchar(50),emp_gender char, emp_department varchar(50), emp_salary double(10,4),emp_company varchar(50), emp_phone int unique, emp_email varchar(100) unique);
+Query OK, 0 rows affected, 1 warning (0.04 sec)
+
+mysql> select * from employee;
+Empty set (0.00 sec)
+
+mysql>  insert into employee values(3,'Dhana','F','IT',50000.00,'Google',998125,'dhana@gmail.com');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from employee;
++--------+----------+------------+----------------+------------+-------------+-----------+-----------------+
+| emp_id | emp_name | emp_gender | emp_department | emp_salary | emp_company | emp_phone | emp_email       |
++--------+----------+------------+----------------+------------+-------------+-----------+-----------------+
+|      3 | Dhana    | F          | IT             | 50000.0000 | Google      |    998125 | dhana@gmail.com |
++--------+----------+------------+----------------+------------+-------------+-----------+-----------------+
+1 row in set (0.00 sec)
+
+mysql>  insert into employee values(3,'Dhana','F','IT',50000.00,'Google',998125,'dhana@gmail.com');
+ERROR 1062 (23000): Duplicate entry '3' for key 'employee.PRIMARY'
+mysql>  insert into employee values(3,'Dhana','F','IT',50000.00,'Google',998125,'dhana@gmail.com');
+ERROR 1062 (23000): Duplicate entry '3' for key 'employee.PRIMARY'
+mysql>  insert into employee values(3,'Dhana','F','IT',50000.00,'Google',99815,'dhana@gmail.com');
+ERROR 1062 (23000): Duplicate entry '3' for key 'employee.PRIMARY'
+mysql>  insert into employee values(4,'Dhana','F','IT',50000.00,'Google',99815,'dhana@gmail.com');
+ERROR 1062 (23000): Duplicate entry 'dhana@gmail.com' for key 'employee.emp_email'
+mysql>  insert into employee values(4,'Dhana','F','IT',50000.00,'Google',998125,'dhana@gmail.com');
+ERROR 1062 (23000): Duplicate entry '998125' for key 'employee.emp_phone'
+mysql>  insert into employee values(4,'Dhana','F','IT',50000.00,'Google',99815,'dhana@gmail.com');
+ERROR 1062 (23000): Duplicate entry 'dhana@gmail.com' for key 'employee.emp_email'
+mysql>  insert into employee values(4,'Dhana','F','IT',50000.00,'Google',99815,'dhanamannem@gmail.com');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from employee;
++--------+----------+------------+----------------+------------+-------------+-----------+-----------------------+
+| emp_id | emp_name | emp_gender | emp_department | emp_salary | emp_company | emp_phone | emp_email             |
++--------+----------+------------+----------------+------------+-------------+-----------+-----------------------+
+|      3 | Dhana    | F          | IT             | 50000.0000 | Google      |    998125 | dhana@gmail.com       |
+|      4 | Dhana    | F          | IT             | 50000.0000 | Google      |     99815 | dhanamannem@gmail.com |
++--------+----------+------------+----------------+------------+-------------+-----------+-----------------------+
+2 rows in set (0.00 sec)
+
+mysql>  insert into employee values(null,'Dhana','F','IT',50000.00,'Google',998125,'dhana@gmail.com');
+ERROR 1048 (23000): Column 'emp_id' cannot be null
+mysql>  insert into employee values(5,'Dhana','F','IT',50000.00,'Google',null,'dhana@gmail.com');
+ERROR 1062 (23000): Duplicate entry 'dhana@gmail.com' for key 'employee.emp_email'
+mysql>  insert into employee values(5,'Dhana','F','IT',50000.00,'Google',null,'dhana4@gmail.com');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from employee;
++--------+----------+------------+----------------+------------+-------------+-----------+-----------------------+
+| emp_id | emp_name | emp_gender | emp_department | emp_salary | emp_company | emp_phone | emp_email             |
++--------+----------+------------+----------------+------------+-------------+-----------+-----------------------+
+|      3 | Dhana    | F          | IT             | 50000.0000 | Google      |    998125 | dhana@gmail.com       |
+|      4 | Dhana    | F          | IT             | 50000.0000 | Google      |     99815 | dhanamannem@gmail.com |
+|      5 | Dhana    | F          | IT             | 50000.0000 | Google      |      NULL | dhana4@gmail.com      |
++--------+----------+------------+----------------+------------+-------------+-----------+-----------------------+
+3 rows in set (0.00 sec)
+
+mysql>  insert into employee values(4,'Dhana','F','IT',50000.00,'Google',null,'dhanamannem5@gmail.com');
+ERROR 1062 (23000): Duplicate entry '4' for key 'employee.PRIMARY'
+mysql>  insert into employee values(6,'Dhana','F','IT',50000.00,'Google',null,'dhanamannem5@gmail.com');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from employee;
++--------+----------+------------+----------------+------------+-------------+-----------+------------------------+
+| emp_id | emp_name | emp_gender | emp_department | emp_salary | emp_company | emp_phone | emp_email              |
++--------+----------+------------+----------------+------------+-------------+-----------+------------------------+
+|      3 | Dhana    | F          | IT             | 50000.0000 | Google      |    998125 | dhana@gmail.com        |
+|      4 | Dhana    | F          | IT             | 50000.0000 | Google      |     99815 | dhanamannem@gmail.com  |
+|      5 | Dhana    | F          | IT             | 50000.0000 | Google      |      NULL | dhana4@gmail.com       |
+|      6 | Dhana    | F          | IT             | 50000.0000 | Google      |      NULL | dhanamannem5@gmail.com |
++--------+----------+------------+----------------+------------+-------------+-----------+------------------------+
+4 rows in set (0.00 sec)
+
+mysql> drop table employee;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> create table employee (emp_id int primary key, emp_name varchar(50) not null,emp_gender char not null, emp_department varchar(50) not null, emp_salary double(10,4) not null, emp_company varchar(50) not null, emp_phone int unique not null, emp_email varchar(100) unique not null);
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+mysql>  insert into employee values(1,'Dhana','F','IT',50000.00,'Google',null,'dhanamannem5@gmail.com');
+ERROR 1048 (23000): Column 'emp_phone' cannot be null
+mysql>  insert into employee values(1,'Dhana','F','null',50000.00,'Google',99581,'dhanamannem5@gmail.com');
+Query OK, 1 row affected (0.04 sec)
+
+mysql>  insert into employee values(1,'Dhana','F',null,50000.00,'Google',99581,'dhanamannem5@gmail.com');
+ERROR 1048 (23000): Column 'emp_department' cannot be null
+mysql>  insert into employee values(1,'Dhana','F','IT', 50000.00,'Google',99581,'dhanamannem5@gmail.com');
+ERROR 1062 (23000): Duplicate entry '1' for key 'employee.PRIMARY'
+mysql>  insert into employee values(2,'Dhana','F','IT', 50000.00,'Google',99581,'dhanamannem5@gmail.com');
+ERROR 1062 (23000): Duplicate entry '99581' for key 'employee.emp_phone'
+mysql>  insert into employee values(7,'Dhana','F','IT', 50000.00,'Google',99581,'dhanamannem5@gmail.com');
+ERROR 1062 (23000): Duplicate entry '99581' for key 'employee.emp_phone'
+mysql>  insert into employee values(7,'Dhana','F','IT', 50000.00,'Google',9981,'dhanamannem5@gmail.com');
+ERROR 1062 (23000): Duplicate entry 'dhanamannem5@gmail.com' for key 'employee.emp_email'
+mysql>  insert into employee values(7,'Dhana','F','IT', 50000.00,'Google',9981,'dhanamannem7@gmail.com');
+Query OK, 1 row affected (0.01 sec)
+
+
+22-01-2023
+==========
+
+
+22-01-23
+mysql> alter table employee add column (emp_dob varchar(10), emp_city varchar(50));
+Query OK, 0 rows affected (0.34 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+mysql> alter table employee modify column emp_dob varchar(10) not null;
+ERROR 1138 (22004): Invalid use of NULL value
+mysql> alter table employee modify column emp_dob varchar(10) not null;
+ERROR 1138 (22004): Invalid use of NULL value
+mysql> delete from employee;
+Query OK, 1 row affected (0.12 sec)
+mysql> alter table employee modify column emp_dob varchar(10) not null;
+Query OK, 0 rows affected (0.44 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+mysql> alter table employee modify column emp_city varchar(50) not null;
+Query OK, 0 rows affected (0.36 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+mysql> alter table employee drop column emp_city;
+Query OK, 0 rows affected (0.17 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+mysql> alter table employee change column emp_dob  emp_date_of_birth varchar(10);
+Query OK, 0 rows affected (0.46 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+mysql> alter table employee rename employee_details;
+Query OK, 0 rows affected (0.14 sec)
+mysql> select * from employee_details;
+Empty set (0.00 sec)
+mysql> insert into employee_details values(1,'nareshkambala','M',50000.00,'IBM','IT',9988562,'javabatch4@gmail.com','16-07-1992');
+Query OK, 1 row affected (0.04 sec)
+mysql> insert into employee_details values(2,'pavan','M',30000.00,'IBM','IT',9786523,'pavan@gmail.com','18-12-'1994');
+Query OK, 1 row affected (0.04 sec)
+mysql> insert into employee_details values (3, 'Veerababu', 'M', 25000.00, 'Microsoft', 'IT', 4555668, 'veeru@gmail.com', '15-11-1992');
+Query OK, 1 row affected (0.06 sec)
+mysql> select * from employee_details where emp_id != 1;
++--------+-----------+------------+-------------+-------------+----------------+-----------+-----------------+-------------------+
+| emp_id | emp_name  | emp_gender | emp_salary  | emp_company | emp_department | emp_phone | emp_email       | emp_date_of_birth |
++--------+-----------+------------+-------------+-------------+----------------+-----------+-----------------+-------------------+
+|      2 | pavan     | M          | 30000.00000 | IBM         | IT             |   9786523 | pavan@gmail.com | 18-12-1994        |
+|      3 | Veerababu | M          | 25000.00000 | Microsoft   | IT             |   4555668 | veeru@gmail.com | 15-11-1992        |
++--------+-----------+------------+-------------+-------------+----------------+-----------+-----------------+-------------------+
+2 rows in set (0.06 sec)
+
+mysql> alter table employee_details modify emp_salary bigint;
+Query OK, 3 rows affected (0.82 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+mysql> insert into employee_details values (4, 'Vasavi', 'F', 15000.00, 'Amazon', 'IT', 98765432, 'vasavi@gmail.com', '16-12-1999');
+Query OK, 1 row affected (0.09 sec)
+mysql> insert into employee_details values (5, 'Dhanalakshmi', 'F', 10000.00, 'Infosys', 'IT', 23456789, 'dhanalakshmi@gmail.com', '16-10-1996');
+Query OK, 1 row affected (0.09 sec)
+
+mysql> select * from employee_details where emp_id != 1;
++--------+--------------+------------+------------+-------------+----------------+-----------+------------------------+-------------------+
+| emp_id | emp_name     | emp_gender | emp_salary | emp_company | emp_department | emp_phone | emp_email              | emp_date_of_birth |
++--------+--------------+------------+------------+-------------+----------------+-----------+------------------------+-------------------+
+|      2 | pavan        | M          |      30000 | IBM         | IT             |   9786523 | pavan@gmail.com        | 18-12-1994        |
+|      3 | Veerababu    | M          |      25000 | Microsoft   | IT             |   4555668 | veeru@gmail.com        | 15-11-1992        |
+|      4 | Vasavi       | F          |      15000 | Amazon      | IT             |  98765432 | vasavi@gmail.com       | 16-12-1999        |
+|      5 | Dhanalakshmi | F          |      10000 | Infosys     | IT             |  23456789 | dhanalakshmi@gmail.com | 16-10-1996        |
++--------+--------------+------------+------------+-------------+----------------+-----------+------------------------+-------------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from employee_details where emp_salary <50000;
++--------+--------------+------------+------------+-------------+----------------+-----------+------------------------+-------------------+
+| emp_id | emp_name     | emp_gender | emp_salary | emp_company | emp_department | emp_phone | emp_email              | emp_date_of_birth |
++--------+--------------+------------+------------+-------------+----------------+-----------+------------------------+-------------------+
+|      2 | pavan        | M          |      30000 | IBM         | IT             |   9786523 | pavan@gmail.com        | 18-12-1994        |
+|      3 | Veerababu    | M          |      25000 | Microsoft   | IT             |   4555668 | veeru@gmail.com        | 15-11-1992        |
+|      4 | Vasavi       | F          |      15000 | Amazon      | IT             |  98765432 | vasavi@gmail.com       | 16-12-1999        |
+|      5 | Dhanalakshmi | F          |      10000 | Infosys     | IT             |  23456789 | dhanalakshmi@gmail.com | 16-10-1996        |
++--------+--------------+------------+------------+-------------+----------------+-----------+------------------------+-------------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from employee_details where emp_salary >50000;
+Empty set (0.05 sec)
+mysql> select * from employee_details where emp_salary between 50000 and 100000;
++--------+---------------+------------+------------+-------------+----------------+-----------+----------------------+-------------------+
+| emp_id | emp_name      | emp_gender | emp_salary | emp_company | emp_department | emp_phone | emp_email            | emp_date_of_birth |
++--------+---------------+------------+------------+-------------+----------------+-----------+----------------------+-------------------+
+|      1 | nareshkambala | M          |      50000 | IBM         | IT             |   9988562 | javabatch4@gmail.com | 16-07-1992        |
++--------+---------------+------------+------------+-------------+----------------+-----------+----------------------+-------------------+
+1 row in set (0.05 sec)
+mysql> select * from employee_details;
++--------+---------------+------------+------------+-------------+----------------+-----------+------------------------+-------------------+
+| emp_id | emp_name      | emp_gender | emp_salary | emp_company | emp_department | emp_phone | emp_email              | emp_date_of_birth |
++--------+---------------+------------+------------+-------------+----------------+-----------+------------------------+-------------------+
+|      1 | nareshkambala | M          |      50000 | IBM         | IT             |   9988562 | javabatch4@gmail.com   | 16-07-1992        |
+|      2 | pavan         | M          |      30000 | IBM         | IT             |   9786523 | pavan@gmail.com        | 18-12-1994        |
+|      3 | Veerababu     | M          |      25000 | Microsoft   | IT             |   4555668 | veeru@gmail.com        | 15-11-1992        |
+|      4 | Vasavi        | F          |      15000 | Amazon      | IT             |  98765432 | vasavi@gmail.com       | 16-12-1999        |
+|      5 | Dhanalakshmi  | F          |      10000 | Infosys     | IT             |  23456789 | dhanalakshmi@gmail.com | 16-10-1996        |
++--------+---------------+------------+------------+-------------+----------------+-----------+------------------------+-------------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from employee_details where emp_name like 'n%h';
+Empty set (0.00 sec)
+
+mysql> select * from employee_details where emp_name like 'n%a';
++--------+---------------+------------+------------+-------------+----------------+-----------+----------------------+-------------------+
+| emp_id | emp_name      | emp_gender | emp_salary | emp_company | emp_department | emp_phone | emp_email            | emp_date_of_birth |
++--------+---------------+------------+------------+-------------+----------------+-----------+----------------------+-------------------+
+|      1 | nareshkambala | M          |      50000 | IBM         | IT             |   9988562 | javabatch4@gmail.com | 16-07-1992        |
++--------+---------------+------------+------------+-------------+----------------+-----------+----------------------+-------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from employee_details where emp_name like '%na';
+Empty set (0.00 sec)
+mysql> select * from employee_details where emp_name like 'na%';
++--------+---------------+------------+------------+-------------+----------------+-----------+----------------------+-------------------+
+| emp_id | emp_name      | emp_gender | emp_salary | emp_company | emp_department | emp_phone | emp_email            | emp_date_of_birth |
++--------+---------------+------------+------------+-------------+----------------+-----------+----------------------+-------------------+
+|      1 | nareshkambala | M          |      50000 | IBM         | IT             |   9988562 | javabatch4@gmail.com | 16-07-1992        |
++--------+---------------+------------+------------+-------------+----------------+-----------+----------------------+-------------------+
+1 row in set (0.00 sec)
+mysql> select * from employee_details where emp_name like '%i';
++--------+--------------+------------+------------+-------------+----------------+-----------+------------------------+-------------------+
+| emp_id | emp_name     | emp_gender | emp_salary | emp_company | emp_department | emp_phone | emp_email              | emp_date_of_birth |
++--------+--------------+------------+------------+-------------+----------------+-----------+------------------------+-------------------+
+|      4 | Vasavi       | F          |      15000 | Amazon      | IT             |  98765432 | vasavi@gmail.com       | 16-12-1999        |
+|      5 | Dhanalakshmi | F          |      10000 | Infosys     | IT             |  23456789 | dhanalakshmi@gmail.com | 16-10-1996        |
++--------+--------------+------------+------------+-------------+----------------+-----------+------------------------+-------------------+
+2 rows in set (0.00 sec)
+mysql> select * from employee_details where emp_name like '%an';
++--------+----------+------------+------------+-------------+----------------+-----------+-----------------+-------------------+
+| emp_id | emp_name | emp_gender | emp_salary | emp_company | emp_department | emp_phone | emp_email       | emp_date_of_birth |
++--------+----------+------------+------------+-------------+----------------+-----------+-----------------+-------------------+
+|      2 | pavan    | M          |      30000 | IBM         | IT             |   9786523 | pavan@gmail.com | 18-12-1994        |
++--------+----------+------------+------------+-------------+----------------+-----------+-----------------+-------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from employee_details where emp_name like '%a%';
++--------+---------------+------------+------------+-------------+----------------+-----------+------------------------+-------------------+
+| emp_id | emp_name      | emp_gender | emp_salary | emp_company | emp_department | emp_phone | emp_email              | emp_date_of_birth |
++--------+---------------+------------+------------+-------------+----------------+-----------+------------------------+-------------------+
+|      1 | nareshkambala | M          |      50000 | IBM         | IT             |   9988562 | javabatch4@gmail.com   | 16-07-1992        |
+|      2 | pavan         | M          |      30000 | IBM         | IT             |   9786523 | pavan@gmail.com        | 18-12-1994        |
+|      3 | Veerababu     | M          |      25000 | Microsoft   | IT             |   4555668 | veeru@gmail.com        | 15-11-1992        |
+|      4 | Vasavi        | F          |      15000 | Amazon      | IT             |  98765432 | vasavi@gmail.com       | 16-12-1999        |
+|      5 | Dhanalakshmi  | F          |      10000 | Infosys     | IT             |  23456789 | dhanalakshmi@gmail.com | 16-10-1996        |
++--------+---------------+------------+------------+-------------+----------------+-----------+------------------------+-------------------+
+5 rows in set (0.00 sec)
+mysql> select * from employee_details where emp_name like '%v%';
++--------+-----------+------------+------------+-------------+----------------+-----------+------------------+-------------------+
+| emp_id | emp_name  | emp_gender | emp_salary | emp_company | emp_department | emp_phone | emp_email        | emp_date_of_birth |
++--------+-----------+------------+------------+-------------+----------------+-----------+------------------+-------------------+
+|      2 | pavan     | M          |      30000 | IBM         | IT             |   9786523 | pavan@gmail.com  | 18-12-1994        |
+|      3 | Veerababu | M          |      25000 | Microsoft   | IT             |   4555668 | veeru@gmail.com  | 15-11-1992        |
+|      4 | Vasavi    | F          |      15000 | Amazon      | IT             |  98765432 | vasavi@gmail.com | 16-12-1999        |
++--------+-----------+------------+------------+-------------+----------------+-----------+------------------+-------------------+
+3 rows in set (0.00 sec)
+mysql> select * from employee_details where emp_id in (1,3,5);
++--------+---------------+------------+------------+-------------+----------------+-----------+------------------------+-------------------+
+| emp_id | emp_name      | emp_gender | emp_salary | emp_company | emp_department | emp_phone | emp_email              | emp_date_of_birth |
++--------+---------------+------------+------------+-------------+----------------+-----------+------------------------+-------------------+
+|      1 | nareshkambala | M          |      50000 | IBM         | IT             |   9988562 | javabatch4@gmail.com   | 16-07-1992        |
+|      3 | Veerababu     | M          |      25000 | Microsoft   | IT             |   4555668 | veeru@gmail.com        | 15-11-1992        |
+|      5 | Dhanalakshmi  | F          |      10000 | Infosys     | IT             |  23456789 | dhanalakshmi@gmail.com | 16-10-1996        |
++--------+---------------+------------+------------+-------------+----------------+-----------+------------------------+-------------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from employee_details where emp_id in (2,4);
++--------+----------+------------+------------+-------------+----------------+-----------+------------------+-------------------+
+| emp_id | emp_name | emp_gender | emp_salary | emp_company | emp_department | emp_phone | emp_email        | emp_date_of_birth |
++--------+----------+------------+------------+-------------+----------------+-----------+------------------+-------------------+
+|      2 | pavan    | M          |      30000 | IBM         | IT             |   9786523 | pavan@gmail.com  | 18-12-1994        |
+|      4 | Vasavi   | F          |      15000 | Amazon      | IT             |  98765432 | vasavi@gmail.com | 16-12-1999        |
++--------+----------+------------+------------+-------------+----------------+-----------+------------------+-------------------+
+2 rows in set (0.00 sec)
+
+
+
+

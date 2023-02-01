@@ -1,0 +1,190 @@
+20/1/23
+
+mysql> update employee set emp_salary = 30000.00,emp_phone=778012,emp_email='vasaviperumalla@gmail.com' where emp_id =3;
+Query OK, 2 rows affected (0.07 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> select * from employee;
++--------+----------------+------------+----------------+------------+-------------+-----------+---------------------------+
+| emp_id | emp_name       | emp_gender | emp_department | emp_salary | emp_company | emp_phone | emp_email                 |
++--------+----------------+------------+----------------+------------+-------------+-----------+---------------------------+
+|      1 | Naresh Kambala | M          | IT             | 50000.0000 | IBM         |  99512887 | java4naresh@gmail.com     |
+|      2 | Pavan Kumar    | M          | IT             | 50000.0000 | IBM         |     99512 | pavankumar@gmail.com      |
+|      3 | Vasavi         | F          | IT             | 30000.0000 | Amazon      |    778012 | vasaviperumalla@gmail.com |
+|      4 | Dhanalakshmi   | F          | IT             |       NULL | Infosys     |      NULL | dhanalakshmi@gmail.com    |
+|      3 | Vasavi         | F          | IT             | 30000.0000 | Amazon      |    778012 | vasaviperumalla@gmail.com |
++--------+----------------+------------+----------------+------------+-------------+-----------+---------------------------+
+5 rows in set (0.00 sec)
+
+mysql> insert into employee values(3, 'Vasavi', 'F', 'HR', 20000.00,'Infosys',7095092,'vasavihr@gmail.com');
+Query OK, 1 row affected (0.09 sec)
+
+mysql> select * from employee;
++--------+----------------+------------+----------------+------------+-------------+-----------+---------------------------+
+| emp_id | emp_name       | emp_gender | emp_department | emp_salary | emp_company | emp_phone | emp_email                 |
++--------+----------------+------------+----------------+------------+-------------+-----------+---------------------------+
+|      1 | Naresh Kambala | M          | IT             | 50000.0000 | IBM         |  99512887 | java4naresh@gmail.com     |
+|      2 | Pavan Kumar    | M          | IT             | 50000.0000 | IBM         |     99512 | pavankumar@gmail.com      |
+|      3 | Vasavi         | F          | IT             | 30000.0000 | Amazon      |    778012 | vasaviperumalla@gmail.com |
+|      4 | Dhanalakshmi   | F          | IT             |       NULL | Infosys     |      NULL | dhanalakshmi@gmail.com    |
+|      3 | Vasavi         | F          | IT             | 30000.0000 | Amazon      |    778012 | vasaviperumalla@gmail.com |
+|      3 | Vasavi         | F          | HR             | 20000.0000 | Infosys     |   7095092 | vasavihr@gmail.com        |
++--------+----------------+------------+----------------+------------+-------------+-----------+---------------------------+
+6 rows in set (0.00 sec)
+
+mysql>
+mysql> update employee set emp_salary = 150000.00 where emp_id =3 and emp_departmet='HR';
+ERROR 1054 (42S22): Unknown column 'emp_departmet' in 'where clause'
+mysql> update employee set emp_salary = 150000.00 where emp_id =3 and emp_department='HR';
+Query OK, 1 row affected (0.07 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from employee;
++--------+----------------+------------+----------------+-------------+-------------+-----------+---------------------------+
+| emp_id | emp_name       | emp_gender | emp_department | emp_salary  | emp_company | emp_phone | emp_email                 |
++--------+----------------+------------+----------------+-------------+-------------+-----------+---------------------------+
+|      1 | Naresh Kambala | M          | IT             |  50000.0000 | IBM         |  99512887 | java4naresh@gmail.com     |
+|      2 | Pavan Kumar    | M          | IT             |  50000.0000 | IBM         |     99512 | pavankumar@gmail.com      |
+|      3 | Vasavi         | F          | IT             |  30000.0000 | Amazon      |    778012 | vasaviperumalla@gmail.com |
+|      4 | Dhanalakshmi   | F          | IT             |        NULL | Infosys     |      NULL | dhanalakshmi@gmail.com    |
+|      3 | Vasavi         | F          | IT             |  30000.0000 | Amazon      |    778012 | vasaviperumalla@gmail.com |
+|      3 | Vasavi         | F          | HR             | 150000.0000 | Infosys     |   7095092 | vasavihr@gmail.com        |
++--------+----------------+------------+----------------+-------------+-------------+-----------+---------------------------+
+6 rows in set (0.00 sec)
+
+mysql> update employee set emp_salary = 150000.00 where emp_id =4 and emp_department='HR';
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+mysql> delete from employee where emp_id=3 and emp_department ='IT';
+Query OK, 2 rows affected (0.11 sec)
+
+mysql> select * from employee;
++--------+----------------+------------+----------------+-------------+-------------+-----------+------------------------+
+| emp_id | emp_name       | emp_gender | emp_department | emp_salary  | emp_company | emp_phone | emp_email              |
++--------+----------------+------------+----------------+-------------+-------------+-----------+------------------------+
+|      1 | Naresh Kambala | M          | IT             |  50000.0000 | IBM         |  99512887 | java4naresh@gmail.com  |
+|      2 | Pavan Kumar    | M          | IT             |  50000.0000 | IBM         |     99512 | pavankumar@gmail.com   |
+|      4 | Dhanalakshmi   | F          | IT             |        NULL | Infosys     |      NULL | dhanalakshmi@gmail.com |
+|      3 | Vasavi         | F          | HR             | 150000.0000 | Infosys     |   7095092 | vasavihr@gmail.com     |
++--------+----------------+------------+----------------+-------------+-------------+-----------+------------------------+
+4 rows in set (0.00 sec)
+
+mysql> update employee set emp_salary = 100000.00;//updated all the records in the employee table
+Query OK, 4 rows affected (0.08 sec)
+Rows matched: 4  Changed: 4  Warnings: 0
+
+mysql> select * from employee;
++--------+----------------+------------+----------------+-------------+-------------+-----------+------------------------+
+| emp_id | emp_name       | emp_gender | emp_department | emp_salary  | emp_company | emp_phone | emp_email              |
++--------+----------------+------------+----------------+-------------+-------------+-----------+------------------------+
+|      1 | Naresh Kambala | M          | IT             | 100000.0000 | IBM         |  99512887 | java4naresh@gmail.com  |
+|      2 | Pavan Kumar    | M          | IT             | 100000.0000 | IBM         |     99512 | pavankumar@gmail.com   |
+|      4 | Dhanalakshmi   | F          | IT             | 100000.0000 | Infosys     |      NULL | dhanalakshmi@gmail.com |
+|      3 | Vasavi         | F          | HR             | 100000.0000 | Infosys     |   7095092 | vasavihr@gmail.com     |
++--------+----------------+------------+----------------+-------------+-------------+-----------+------------------------+
+4 rows in set (0.00 sec)
+
+mysql> delete from employee;//deleted all the records in the employee table
+Query OK, 4 rows affected (0.08 sec)
+
+mysql> select * from employee;
+Empty set (0.00 sec)
+
+mysql> drop table employee;
+Query OK, 0 rows affected (0.16 sec)
+mysql> show tables;
+Empty set (0.58 sec)
+
+
+mysql> create table emp(emp_id int,emp_name varchar(20));
+Query OK, 0 rows affected (0.19 sec)
+
+mysql> insert into emp values(111, 'Vasavi');
+Query OK, 1 row affected (0.11 sec)
+
+mysql> insert into emp values(112, 'dhanalakshmi');
+Query OK, 1 row affected (0.07 sec)
+
+mysql> select * from emp;
++--------+--------------+
+| emp_id | emp_name     |
++--------+--------------+
+|    111 | Vasavi       |
+|    112 | dhanalakshmi |
++--------+--------------+
+2 rows in set (0.00 sec)
+
+mysql> commit;
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> delete from emp where emp_id=112;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from emp;
++--------+----------+
+| emp_id | emp_name |
++--------+----------+
+|    111 | Vasavi   |
++--------+----------+
+1 row in set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from emp;
++--------+----------+
+| emp_id | emp_name |
++--------+----------+
+|    111 | Vasavi   |
++--------+----------+
+1 row in set (0.00 sec)
+
+COMMIT permanently saves the changes made by the current transaction.	
+ROLLBACK undo the changes made by the current transaction.
+
+mysql> insert into emp values(112,'dhanalakshmi');
+Query OK, 1 row affected (0.10 sec)
+
+mysql> select * from emp;
++--------+--------------+
+| emp_id | emp_name     |
++--------+--------------+
+|    111 | Vasavi       |
+|    112 | dhanalakshmi |
++--------+--------------+
+2 rows in set (0.00 sec)
+
+mysql> commit;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> insert into emp values(110,'Naresh');
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into emp values(119,'pavan');
+Query OK, 1 row affected (0.14 sec)
+
+mysql> select * from emp;
++--------+--------------+
+| emp_id | emp_name     |
++--------+--------------+
+|    111 | Vasavi       |
+|    112 | dhanalakshmi |
+|    110 | Naresh       |
+|    119 | pavan        |
++--------+--------------+
+4 rows in set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from emp;
++--------+--------------+
+| emp_id | emp_name     |
++--------+--------------+
+|    111 | Vasavi       |
+|    112 | dhanalakshmi |
+|    110 | Naresh       |
+|    119 | pavan        |
++--------+--------------+
+4 rows in set (0.00 sec)
