@@ -23,6 +23,7 @@ public class SerializationClient {
 		oos.writeObject(kc4);
 		oos.writeObject(sb);
 		oos.flush();
+		System.out.println("Serialization completed");
 
 		oos.close();
 

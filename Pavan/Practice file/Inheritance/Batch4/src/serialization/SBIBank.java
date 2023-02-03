@@ -14,7 +14,10 @@ public class SBIBank implements Serializable {
 	}
 
 	public SBIBank(String customerName, int customerAccountNumber, String customerId) {
-
+		super();
+		this.customerName = customerName;
+		this.customerAccountNumber = customerAccountNumber;
+		this.customerId = customerId;
 	}
 
 	public String getCustomerName() {
