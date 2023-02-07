@@ -1,6 +1,7 @@
 package collection;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 public class ArrayListExample {
@@ -16,21 +17,22 @@ public class ArrayListExample {
 		//list.add("Naresh");//6
 		//list.add('N');//7
 		list.add(1);//8
-        System.out.println(list);
+        //System.out.println(list);
         //System.out.println(list.get(2));
         /*Iterator itr = list.iterator();
         while(itr.hasNext()) {
         	System.out.println(itr.next());
         }*/
         //list.remove("Naresh");
-        System.out.println(list.lastIndexOf(1));
-        list.remove(5);
+       // System.out.println(list.lastIndexOf(1));
+        //list.remove(5);
+        //System.out.println(list);
+        //System.out.println(list.isEmpty());
+        //list.clear();
         System.out.println(list);
-        System.out.println(list.isEmpty());
-        list.clear();
+        //System.out.println(list.isEmpty());
+        Collections.sort(list);
         System.out.println(list);
-        System.out.println(list.isEmpty());
-        
         
 	}
 
