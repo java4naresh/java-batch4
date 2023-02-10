@@ -63,6 +63,8 @@ public class HotelDTO implements Comparable<HotelDTO>{
 		
 		return this.hotelName.compareTo(o.getHotelName());
 	}
-	
+
+
+
 
 }
