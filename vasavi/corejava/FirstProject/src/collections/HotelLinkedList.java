@@ -21,6 +21,16 @@ public static void main(String[] args) {
     HotelDTO  hotel8= new HotelDTO(8,"Aparna");
     HotelDTO  hotel9= new HotelDTO(9,"Taj");
     HotelDTO  hotel10= new HotelDTO(10,"Archana");
+    HotelDTO hotel11 = new HotelDTO(15,"Rasoie");
+	HotelDTO hotel12 = new HotelDTO(11,"AmarawathiHotel");
+	HotelDTO hotel13 = new HotelDTO(12,"Sitara");
+	HotelDTO hotel14 = new HotelDTO(13,"Marigold");
+	HotelDTO hotel15 = new HotelDTO(14,"Athidhi");
+	HotelDTO hotel16 = new HotelDTO(16,"Kakatiya");
+	HotelDTO hotel17 = new HotelDTO(17,"ArtBoutique");
+	HotelDTO hotel18 = new HotelDTO(18,"Taj");
+	HotelDTO hotel19 = new HotelDTO(19,"Sheraton");
+	HotelDTO hotel20 = new HotelDTO(20,"Avasa");
     hotels.add(hotel1);
     hotels.add(hotel2);
     hotels.add(hotel3);
@@ -31,12 +41,23 @@ public static void main(String[] args) {
     hotels.add(hotel8);
     hotels.add(hotel9);
     hotels.add(hotel10);
+    hotels.add(hotel11);
+    hotels.add(hotel12);
+    hotels.add(hotel13);
+    hotels.add(hotel14);
+    hotels.add(hotel15);
+    hotels.add(hotel16);
+    hotels.add(hotel17);
+    hotels.add(hotel18);
+    hotels.add(hotel19);
+    hotels.add(hotel20);
     
     Iterator itr = hotels.iterator();
     while(itr.hasNext()) {
-    	if(hotelName.startsWith("A")) {
+    	HotelDTO hotel = (HotelDTO)itr.next();
+    	if(hotel.getHotelName().startsWith("A")) {
     			
-    		System.out.println(hotels);
+    		System.out.println(hotel);
     	}
     }  	
   }

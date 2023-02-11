@@ -1,16 +1,12 @@
 package collections;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.Vector;
 
-public class HotelArrayList {
-
+public class HotelVector {
 	public static void main(String[] args) {
-		
-		ArrayList<HotelDTO> hotels = new ArrayList<>();
-	    HotelDTO  hotel1 = new HotelDTO(1, "Udipi");
+	
+		Vector<HotelDTO> hotels = new Vector<>();
+		HotelDTO  hotel1 = new HotelDTO(1, "Udipi");
 	    HotelDTO  hotel2 = new HotelDTO(2, "Raghavendra");
 	    HotelDTO  hotel3 = new HotelDTO(3,"Aparna");
 	    HotelDTO  hotel4 = new HotelDTO(4,"Taj");
@@ -50,37 +46,11 @@ public class HotelArrayList {
 	    hotels.add(hotel18);
 	    hotels.add(hotel19);
 	    hotels.add(hotel20);
-	    
-	    Iterator itr = hotels.iterator();
-	    while(itr.hasNext()) {
-	    	HotelDTO hotel = (HotelDTO)itr.next();
-	    	
-	    	if(hotel.getHotelName().toUpperCase()){
-	    		
-	    		System.out.println(hotel);
-	    		
-	    	}
-	    	/*if(hotel.getHotelName().startsWith("A")) {
-	    			
-	    		System.out.println(hotel);
-        	}*/
-         
-        }
-	    
-	   // Collections.sort(hotels);
-	    //System.out.println(hotels);
-	    
-	    
-	    
-	    //hotels.remove(new HotelDTO(2, "Raghavendra"));
-	    
-	//ArrayList<HotelDTO> hotels2 = new ArrayList<>();
-	 // hotels2.add(new HotelDTO(1, "Udipi"));
-	 // hotels.removeAll(hotels2);
-	// System.out.println(hotels);
-	    
-	    
-
+	    System.out.println(hotels);
+		
+		
+		
+		
 	}
 
 }
