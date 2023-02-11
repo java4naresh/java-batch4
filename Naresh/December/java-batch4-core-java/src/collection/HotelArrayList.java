@@ -39,10 +39,11 @@ public class HotelArrayList {
 	    Iterator itr = hotels.iterator();
         while(itr.hasNext()) {
 			HotelDTO hotel = (HotelDTO)itr.next();
-        	if(hotel.getHotelName().startsWith("A")) {
-        		    		
-        		System.out.println(hotel);
-        	}
+        	//if(hotel.getHotelName().startsWith("A")) {
+			//String hotelName = hotel.getHotelName();
+			hotel.setHotelName(hotel.getHotelName().toUpperCase());	
+        	System.out.println(hotel);
+        	//}
          
         }
 	}

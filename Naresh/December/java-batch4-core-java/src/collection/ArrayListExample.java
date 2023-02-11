@@ -1,8 +1,10 @@
 package collection;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 
 public class ArrayListExample {
 
@@ -29,10 +31,16 @@ public class ArrayListExample {
         //System.out.println(list);
         //System.out.println(list.isEmpty());
         //list.clear();
-        System.out.println(list);
+        //System.out.println(list);
         //System.out.println(list.isEmpty());
-        Collections.sort(list);
-        System.out.println(list);
+        //Collections.sort(list);
+        //System.out.println(list);
+		
+		// converting list into array
+		Integer[] numbers = (Integer[])list.toArray();
+		Integer[] numbers2 = {4,5,6,9,8,10,11,13};
+		List<Integer> numbersList = Arrays.asList(numbers2);
+		
         
 	}
 
