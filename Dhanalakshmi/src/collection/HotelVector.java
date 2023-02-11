@@ -1,14 +1,15 @@
 package collection;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.Vector;
 
-public class HotelArrayList2 {
+public class HotelVector {
 
 	private static String[] hotelName;
 
 	public static void main(String[] args) {
-		ArrayList<HotelDTO2> hotels = new ArrayList<>();
+		Vector<HotelDTO2> hotels = new Vector<>();
+		//ArrayList<HotelDTO2> hotels = new ArrayList<>();
 		HotelDTO2 hotel1 = new HotelDTO2("Annapurna");
 		HotelDTO2 hotel2 = new HotelDTO2("Spicy");
 		HotelDTO2 hotel3 = new HotelDTO2("Abhiruchi");
@@ -49,52 +50,8 @@ public class HotelArrayList2 {
 		hotels.add(hotel18);
 		hotels.add(hotel19);
 		hotels.add(hotel20);
-		//HotelDTO2 hotel = hotel1.toUpperCase();
-		//System.out.println(hotel10.toUpperCase());
-		
-		
-			
-		 /*Iterator itr = hotels.iterator();
-	        while(itr.hasNext()) {
-	        	HotelDTO2 hotel = (HotelDTO2)itr.next();
-	        	if(hotel.getHotelName().startsWith("A")) {
-	        		    		
-	        		System.out.println(hotel);
-		
-	        	}*/
-	
-		Iterator itr = hotels.iterator();
-	    while(itr.hasNext()) {
-	    	HotelDTO2 hotel = (HotelDTO2)itr.next();
-	    	
-	    	if(hotel.getHotelName().toUpperCase()){
-	    		
-	    		System.out.println(hotel);
-	    		
-	    	}
-	    
-	    
-	 	/*if(hotel.getHotelName().startsWith("A")) {
-		
-		System.out.println(hotel);
-	}*/
- 
-}
+		System.out.println(hotels);
 
-       // Collections.sort(hotels);
-       //System.out.println(hotels);
-
-
-
-      //hotels.remove(new HotelDTO2(2, "Sitara"));
-
-     /* ArrayList<HotelDTO2> hotels2 = new ArrayList<>();
-       hotels2.add(new HotelDTO2("Spicy"));
-     hotels.removeAll(hotels2);
-     System.out.println(hotels);*/
-	    
-    }
-	        
+	}
 
 }
-
