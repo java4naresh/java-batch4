@@ -102,11 +102,11 @@ public class Employee implements Comparable<Employee> {
 	public int compareTo(Employee o) {
 		// return this.city.compareTo(o.getCity());
 
-		// return this.employeeName.compareTo(getEmployeeName());
+		// return this.employeeName.compareTo(o.getEmployeeName());
 
 		// return this.gender.compareTo(o.getGender());
 
-		// return this.employeeId.compareTo(getEmployeeId());
+		// return this.employeeId.compareTo(o.getEmployeeId());
 
 		 return this.age.compareTo(o.getAge());
 
