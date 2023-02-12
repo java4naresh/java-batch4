@@ -55,7 +55,7 @@ public class HotelArrayList {
 	    while(itr.hasNext()) {
 	    	HotelDTO hotel = (HotelDTO)itr.next();
 	    	
-	    	if(hotel.getHotelName().toUpperCase()){
+	    	hotel.setHotelName(hotel.getHotelName().toUpperCase());
 	    		
 	    		System.out.println(hotel);
 	    		
@@ -65,7 +65,7 @@ public class HotelArrayList {
 	    		System.out.println(hotel);
         	}*/
          
-        }
+        
 	    
 	   // Collections.sort(hotels);
 	    //System.out.println(hotels);
