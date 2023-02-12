@@ -20,14 +20,14 @@ public class VectorExample {
 	      System.out.println(namesList);
 	      namesList.replaceAll(String:: toUpperCase);
 			System.out.println(namesList);
-	      Vector<String> vector = new Vector<>(namesList);
+	     /* Vector<String> vector = new Vector<>(namesList);
         System.out.println(vector.add("Dhana"));//0 true
         vector.add("Pawan");//1
         vector.add("Vamsi");//2
         vector.add("Vasavi");//3
         System.out.println(vector);
         vector.add(4, "Naresh");
-        System.out.println(vector);
+        System.out.println(vector);*/
 	}
 
 }

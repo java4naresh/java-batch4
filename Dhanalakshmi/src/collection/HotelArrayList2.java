@@ -49,38 +49,22 @@ public class HotelArrayList2 {
 		hotels.add(hotel18);
 		hotels.add(hotel19);
 		hotels.add(hotel20);
-		//HotelDTO2 hotel = hotel1.toUpperCase();
-		//System.out.println(hotel10.toUpperCase());
+		//System.out.println(hotels);
 		
-		
-			
-		 /*Iterator itr = hotels.iterator();
+		 Iterator itr = hotels.iterator();
 	        while(itr.hasNext()) {
 	        	HotelDTO2 hotel = (HotelDTO2)itr.next();
-	        	if(hotel.getHotelName().startsWith("A")) {
-	        		    		
-	        		System.out.println(hotel);
-		
-	        	}*/
-	
-		Iterator itr = hotels.iterator();
-	    while(itr.hasNext()) {
-	    	HotelDTO2 hotel = (HotelDTO2)itr.next();
-	    	
-	    	if(hotel.getHotelName().toUpperCase()){
-	    		
-	    		System.out.println(hotel);
-	    		
-	    	}
-	    
-	    
+	        	//if(hotel.getHotelName().startsWith("A")) {
+				//String hotelName = hotel.getHotelName();
+				hotel.setHotelName(hotel.getHotelName().toUpperCase());	
+	        	System.out.println(hotel);
+	        	}
+
 	 	/*if(hotel.getHotelName().startsWith("A")) {
 		
 		System.out.println(hotel);
 	}*/
  
-}
-
        // Collections.sort(hotels);
        //System.out.println(hotels);
 
