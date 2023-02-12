@@ -40,8 +40,20 @@ public class ArrayListExample {
 		Integer[] numbers = (Integer[])list.toArray();
 		Integer[] numbers2 = {4,5,6,9,8,10,11,13};
 		List<Integer> numbersList = Arrays.asList(numbers2);
-		
+		Arrays.asList(1,8,9,3,4);
+		int sum = sumOfArrayList(numbersList);
+		System.out.println(sum);
         
+	}
+	
+	public static int sumOfArrayList(List<Integer> numbers) {
+		int sum = 0;
+		Iterator<Integer> itr = numbers.iterator();
+		while(itr.hasNext()) {
+        	System.out.println(itr.next());
+        	sum = sum + (Integer)itr.next();
+        }
+		return sum / numbers.size();
 	}
 
 }

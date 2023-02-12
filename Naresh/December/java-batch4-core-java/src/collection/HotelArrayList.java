@@ -36,9 +36,9 @@ public class HotelArrayList {
 		//Collections.sort(hotels);
 		//System.out.println(hotels);
 	    
-	    Iterator itr = hotels.iterator();
+	    Iterator<HotelDTO> itr = hotels.iterator();
         while(itr.hasNext()) {
-			HotelDTO hotel = (HotelDTO)itr.next();
+			HotelDTO hotel = itr.next();
         	//if(hotel.getHotelName().startsWith("A")) {
 			//String hotelName = hotel.getHotelName();
 			hotel.setHotelName(hotel.getHotelName().toUpperCase());	
