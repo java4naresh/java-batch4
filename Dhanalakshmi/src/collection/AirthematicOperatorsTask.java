@@ -33,6 +33,7 @@ public class AirthematicOperatorsTask {
 		
 		OptionalInt min = list.stream().mapToInt(Integer::valueOf).min();
 		System.out.println("minimum number="+ min);
+
 		
 	}
 

@@ -52,6 +52,7 @@ public class HotelVector {
 		hotels.add(hotel20);
 		System.out.println(hotels);
 
+
 	}
 
 }

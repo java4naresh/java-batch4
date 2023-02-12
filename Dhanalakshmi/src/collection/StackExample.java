@@ -26,6 +26,7 @@ public class StackExample {
 		System.out.println(stack);
 		System.out.println(stack.get(4));// 
 
+
 	}
 
 }

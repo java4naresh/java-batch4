@@ -25,6 +25,7 @@ public class ArrayListExample {
 		list.add(26);//11
 		System.out.println(list);
 		//System.out.println(list.get(3));
+
 		
 		/*Iterator itr = list.iterator();
 		while(itr.hasNext()) {
