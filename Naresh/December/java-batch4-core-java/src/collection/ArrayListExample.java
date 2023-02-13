@@ -19,6 +19,7 @@ public class ArrayListExample {
 		//list.add("Naresh");//6
 		//list.add('N');//7
 		list.add(1);//8
+		list.get(1);
         //System.out.println(list);
         //System.out.println(list.get(2));
         /*Iterator itr = list.iterator();

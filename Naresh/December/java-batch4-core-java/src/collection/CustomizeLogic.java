@@ -32,8 +32,9 @@ public class CustomizeLogic {
 	
 	public static ArrayList<Integer> asList(int[] numbers) {
 		ArrayList<Integer> list = new ArrayList<>();
-		for(int number:numbers) {
-			list.add(number);
+		//for(int number:numbers) {
+		for(int i=0; i< numbers.length; i++) {
+			list.add(numbers[i]);
 		}
 		return list;
 	}
