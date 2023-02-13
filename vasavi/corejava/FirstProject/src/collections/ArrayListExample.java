@@ -43,10 +43,31 @@ public class ArrayListExample {
 		//Collections.sort(list);
 		//System.out.println(list);
 		
+		
+		// converting list into array
+				Integer[] numbers = (Integer[])list.toArray();
+				Integer[] numbers2 = {4,5,6,9,8,10,11,13};
+				List<Integer> numbersList = Arrays.asList(numbers2);
+				Arrays.asList(1,8,9,3,4);
+				int sum = sumOfArrayList(numbersList);
+				System.out.println(sum);
+		        
+			}
+			
+			public static int sumOfArrayList(List<Integer> numbers) {
+				int sum = 0;
+				Iterator<Integer> itr = numbers.iterator();
+				while(itr.hasNext()) {
+		        	System.out.println(itr.next());
+		        	sum = sum + (Integer)itr.next();
+		        }
+				return sum / numbers.size();
+			}
+		
 		//converting list into array
 		
 		//Integer[] numbers= (Integer[])list.toArray();
-		Integer[] arr= new Integer[list.size()]; //array size
+		/*Integer[] arr= new Integer[list.size()]; //array size
 		list.toArray(arr);
 		for(int i=0; i<arr.length; i++){
 	         System.out.println("Element at the index "+i+" is ::"+arr[i]);
@@ -66,10 +87,10 @@ public class ArrayListExample {
         	//numberList1.add(num);
          }
          System.out.println(numberList1);
-        
+        */
         
 		//Arrays.asList(1,6,8,9,8,3);
 		
-	}
-
 }
+
+
