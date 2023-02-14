@@ -60,6 +60,7 @@ public class HashSetExample {
 	System.out.println(setNumbers.hashCode());
 	setNumbers.removeAll(listNumbers);
 	System.out.println(setNumbers);*/
+
 	}
 
 }
