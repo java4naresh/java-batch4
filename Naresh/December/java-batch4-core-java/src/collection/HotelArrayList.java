@@ -33,7 +33,7 @@ public class HotelArrayList {
 	    //ArrayList<HotelDTO> hotels2 = new ArrayList<>();
 	    //hotels2.add(new HotelDTO(1, "Udipi"));
 	    //hotels.removeAll(hotels2);
-		//Collections.sort(hotels);
+		Collections.sort(hotels);
 		//System.out.println(hotels);
 	    
 	    Iterator<HotelDTO> itr = hotels.iterator();
