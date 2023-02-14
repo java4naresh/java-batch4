@@ -23,9 +23,10 @@ public class ArrayListExample {
 		//list.add('G');//9
 		//list.add('C');//10
 		list.add(26);//11
+		list.get(100);
 		System.out.println(list);
 		//System.out.println(list.get(3));
-
+         list.remove(2);
 		
 		/*Iterator itr = list.iterator();
 		while(itr.hasNext()) {

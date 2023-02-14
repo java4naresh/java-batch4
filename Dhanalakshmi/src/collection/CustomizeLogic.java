@@ -37,7 +37,7 @@ public class CustomizeLogic {
 			// for(int number:numbers) {
 			 for(int i=0; i< numbers.length; i++)
 				//list.add(number); 
-				 list.add(numbers[i]);
+				 list.add(numbers [i]);
 				 
 			 }
 			 return list; 
