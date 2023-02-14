@@ -13,10 +13,10 @@ public class Average {
 	        list.add(30);
 	        list.add(40);
 	        
-	        int avg = AverageOfArrayList(list);
+	        int avg = averageOfArrayList(list);
 			System.out.println(avg);
 	    }
-	        public static int AverageOfArrayList(List<Integer> list) {
+	        public static int averageOfArrayList(List<Integer> list) {
 	        int avg=0;
 	        Iterator<Integer> iterator = list.iterator();
 	        while (iterator.hasNext()) {
