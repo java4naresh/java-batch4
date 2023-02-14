@@ -27,6 +27,7 @@ public class HashSetExample {
 	setchar.add('G');
 	setchar.add('M');
 	System.out.println(setchar);
+
 	Iterator<String> itr = setNames.iterator();
 	while(itr.hasNext()) {
 	   System.out.println(itr.next());	
