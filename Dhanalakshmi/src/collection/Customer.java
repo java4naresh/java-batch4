@@ -19,6 +19,7 @@ public class Customer {
 		return customerName.length();
 	}
 
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

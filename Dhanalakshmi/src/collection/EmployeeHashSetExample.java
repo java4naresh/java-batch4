@@ -28,6 +28,7 @@ public class EmployeeHashSetExample {
 	employees.add(employee8);
 	employees.add(employee9);
 	employees.add(employee10);
+
 	//System.out.println(employees);
 	
 	Set<Employee> employee = empOfHashSet(employees);

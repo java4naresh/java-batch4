@@ -20,6 +20,7 @@ public class CustomerHashSetExample {
 		customers.add(customer5);
 		customers.add(customer6);
 		System.out.println(customers);
+
 		
 	}
 	
