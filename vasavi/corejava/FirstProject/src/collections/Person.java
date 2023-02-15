@@ -100,11 +100,28 @@ public class Person implements Comparable<Person>{
 			/*if(this.income > o.getIncome()) return 1;
 				else if(this.income < o.getIncome()) return -1;
 				else return 0;*/
-		if (this.personName.compareTo(o.getPersonName()) < 0) return -1;
+		/*if (this.personName.compareTo(o.getPersonName()) < 0) return -1;
 		    
 		else if (this.personName.compareTo(o.getPersonName()) >0) return 1;
 		    
-		 else return 0;
+		 else return 0;*/
+		
+		int result = 0;
+		int length = (this.personName.length() < o.getPersonName().length()) ? this.personName.length() :
+			o.getPersonName().length();
+		for(int i=0;i<length;i++) {
+		char ch = this.personName.charAt(i);
+		char ch2 = o.getPersonName().charAt(i);
+		if(ch < ch2) { 
+		result = -1;
+		break;
+		}
+		else if(ch > ch2) { 
+		result = 1;
+		break;
+		}
+		}
+		return result;
 		   				
 				
 	}
