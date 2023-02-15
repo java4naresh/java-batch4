@@ -89,11 +89,28 @@ public class Person implements Comparable<Person>{
 	@Override
 	public int compareTo(Person o) {
 		//return this.income.compareTo(o.getIncome());
-		return o.getIncome().compareTo(this.income);
+		//return o.getIncome().compareTo(this.income);
 		//if(this.income > o.getIncome()) return 1;
 		//else if(this.income < o.getIncome()) return -1;
 		//else return 0;
 		//return 0;
+		
+		int result = 0;
+		int length = (this.personName.length() < o.getPersonName().length()) ? this.personName.length() :
+			o.getPersonName().length();
+		for(int i=0;i<length;i++) {
+		char ch = this.personName.charAt(i);
+		char ch2 = o.getPersonName().charAt(i);
+		if(ch < ch2) { 
+		result = -1;
+		break;
+		}
+		else if(ch > ch2) { 
+		result = 1;
+		break;
+		}
+		}
+		return result;
 		
 	}
 	
