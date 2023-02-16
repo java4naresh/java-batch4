@@ -1,14 +1,26 @@
 package collection;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
-public class PersonLinkedHashSetExample {
+public class CitizenTreeSet {
 
 	public static void main(String[] args) {
+		/*Citizen c1 = new Citizen(1, "Charry", 3, "Indian");
+		Citizen c2 = new Citizen(2, "Mahi", 2, "Indian");
+		Citizen c3 = new Citizen(3, "Varsha", 18, "Indian");
+		Citizen c4 = new Citizen(4, "Pandu", 5, "Indian");
+		Citizen c5 = new Citizen(5, "Divi", 16, "Indian");
+		Set<Citizen> citizens = new TreeSet<>();
+		citizens.add(c1);
+		citizens.add(c2);
+		citizens.add(c3);
+		citizens.add(c4);
+		citizens.add(c5);
+		System.out.println(citizens);*/
+		
 		Person p1 = new Person(1, "Dhana", "dhana@gmail.com", 40000.00, "Guntur");
 		Person p2 = new Person(2, "Charry", "charry@gmail.com", 50000.00, "PDRL");
 		Person p3 = new Person(3, "Mahi", "mahi@gmail.com", 30000.00, "Vijayawada");
@@ -22,10 +34,9 @@ public class PersonLinkedHashSetExample {
 		persons.add(p4);
 		persons.add(p5);
 		persons.add(p6);
-		Collections.sort(persons);
-		Set<Person> personsSet = new LinkedHashSet<>(persons);
-		System.out.println(personsSet);
-		
+		Set<Person> PersonsSet = new TreeSet<>(persons);
+		System.out.println(PersonsSet);
+
 	}
 
 }
