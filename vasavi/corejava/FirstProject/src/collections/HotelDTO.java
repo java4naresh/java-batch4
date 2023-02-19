@@ -7,23 +7,17 @@ public class HotelDTO implements Comparable<HotelDTO>{
 	private int hotelId;
 	
 	private String hotelName;
-
-	public HotelDTO(int hotelId, String hotelName) {
-		super();
-		this.hotelId = hotelId;
-		this.hotelName = hotelName;
-	}
 	
-	public HotelDTO() {
-		super();
-	}
+	private int rating;
 	
 	
-
+	
+	
 	@Override
 	public int hashCode() {
-		return Objects.hash(hotelId, hotelName);
+		return hotelId;
 	}
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -34,29 +28,62 @@ public class HotelDTO implements Comparable<HotelDTO>{
 		if (getClass() != obj.getClass())
 			return false;
 		HotelDTO other = (HotelDTO) obj;
-		return hotelId == other.hotelId && Objects.equals(hotelName, other.hotelName);
+		return hotelId == other.hotelId && Objects.equals(hotelName, other.hotelName) && rating == other.rating;
 	}
+
+
+	public HotelDTO(int hotelId, String hotelName, int rating) {
+		super();
+		this.hotelId = hotelId;
+		this.hotelName = hotelName;
+		this.rating = rating;
+	}
+
+	
+	public HotelDTO() {
+		super();
+		
+	}
+	
+
 
 	public int getHotelId() {
 		return hotelId;
 	}
 
+
 	public void setHotelId(int hotelId) {
 		this.hotelId = hotelId;
 	}
+
 
 	public String getHotelName() {
 		return hotelName;
 	}
 
+
 	public void setHotelName(String hotelName) {
 		this.hotelName = hotelName;
 	}
 
+
+	public int getRating() {
+		return rating;
+	}
+
+
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
+	
+	
+
+
 	@Override
 	public String toString() {
-		return "HotelDTO [hotelId=" + hotelId + ", hotelName=" + hotelName + "]";
+		return "HotelDTO [hotelId=" + hotelId + ", hotelName=" + hotelName + ", rating=" + rating + "]";
 	}
+
 
 	@Override
 	public int compareTo(HotelDTO o) {

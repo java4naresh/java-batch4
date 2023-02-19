@@ -112,7 +112,7 @@ public class Person implements Comparable<Person>{
 		for(int i=0;i<length;i++) {
 		char ch = this.personName.charAt(i);
 		char ch2 = o.getPersonName().charAt(i);
-		if(ch < ch2) { 
+		if(ch > ch2) { 
 		result = -1;
 		break;
 		}
