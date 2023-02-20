@@ -1,4 +1,4 @@
-package collection;
+package collections;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -39,7 +39,7 @@ public class CustomizeLogic {
 				//list.add(number); 
 				 list.add(numbers [i]);
 				 
-			 }
+			 
 			 return list; 
 			
 		}

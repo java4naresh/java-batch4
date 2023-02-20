@@ -1,4 +1,4 @@
-package collection;
+package collections;
 
 public class EvenAndOddExample {
 
