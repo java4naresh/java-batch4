@@ -63,7 +63,10 @@ public class HashMapExample {
 		mothertongue.put("Orissa", "Odia");
 		mothertongue.put("Maharastra", "Marati");
 		mothertongue.put("Delhi", "Hindi");
+		mothertongue.put(null, "Hindi");
+		mothertongue.put(null, "Korian");
 		System.out.println(mothertongue);
+		System.out.println(mothertongue.get("Goa"));
 		
 	}
 
