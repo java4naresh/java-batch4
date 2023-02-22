@@ -48,6 +48,9 @@ public class HashMapExample {
 		capitals.put("Orissa", "Jharkhand");
 		capitals.put("Maharastra", "Mumbai");
 		capitals.put("Delhi", "Delhi");
+		capitals.put(null, "Goa");
+		capitals.put(null, "Poducherry");
+		System.out.println(capitals);
 		System.out.println(capitals.get("MadyaPradesh"));
 	}
 

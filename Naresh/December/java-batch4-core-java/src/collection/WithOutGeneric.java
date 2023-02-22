@@ -14,6 +14,8 @@ public class WithOutGeneric {
 		list.add('K');
 		list.add(85);
 		list.add("Kambala");
+		list.add("Vasavi");
+		//list.add(" ");
 		list.add(new HotelDTO());
 		
 		int sum = 0;
@@ -25,7 +27,17 @@ public class WithOutGeneric {
 				int num = (Integer)numObj;
 				sum = sum + num;
 			} else if (numObj instanceof String) {
-				word = word + " " + (String)numObj ;
+				//word = word + " " + (String)numObj ;
+				//if (numObj != word) {
+				//	word = word + (String) numObj + ",";
+
+				//	word = word.substring(0, word.length() - 1);
+
+				//}
+				word = word + " , " + (String)numObj;
+				if (word.endsWith(" , ")) {
+					word = word.substring(0, word.length() - 2);
+				}
 			} else if (numObj instanceof HotelDTO) {
 				System.out.println(numObj);
 			}
