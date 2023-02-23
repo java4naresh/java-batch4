@@ -22,23 +22,56 @@ public class WithOutGeneric {
 		int sum = 0;
 		String word = "";
 		Iterator itr = list.iterator();
-		while(itr.hasNext()) {
+		int index = 1;
+		/*while(itr.hasNext()) {
 			Object numObj = itr.next();
 			if(numObj instanceof Integer) {
 				int num = (Integer)numObj;
 				sum = sum + num;
 			} else if (numObj instanceof String) {
-				 if (!word.isEmpty()) {
-	                    word += ",";
-	                }
-	                word += (String)numObj;
-				//word = word + (word.isEmpty() ? "" : ", ") + (String)numObj;
-			  //word = word + " ," + (String)numObj ;
-			 
+				//word = word + " " + (String)numObj ;
+				//if (numObj != word) {
+				//	word = word + (String) numObj + ",";
+
+				//	word = word.substring(0, word.length() - 1);
+
+				//}
+				if(index != list.size()) {
+				//word = word + " , " + (String)numObj;
+					word = word + (String) numObj + ",";
+				} else word = word + (String) numObj;
+				if (word.endsWith(" , ")) {
+					word = word.substring(0, word.length() - 2);
+				}
 			} else if (numObj instanceof HotelDTO) {
 				System.out.println(numObj);
 			}
-			
+			if(index == list.size()) {
+				if(word.endsWith(",")) {
+					word = word.substring(0, word.length() - 1);
+				}
+			}
+			index++;
+		}*/
+		
+		
+		while(itr.hasNext()) {
+			Object numObj =  itr.next();
+			if(numObj instanceof Integer) {
+				int num = (Integer)numObj;
+				sum = sum + num;
+			}else if (numObj instanceof String) {
+				word = word + (String)numObj + " , ";
+			}else if (numObj instanceof HotelDTO) {
+				System.out.println(numObj);
+				//word = word + " " + (String)numObj;
+				//word = word + " , " + (String)numObj;
+			}
+		
+		}
+		word = word.trim();
+		if (word.endsWith(",")) {
+			word = word.substring(0, word.length() - 1);
 		}
 		System.out.println(sum);
 		System.out.println(word.trim());

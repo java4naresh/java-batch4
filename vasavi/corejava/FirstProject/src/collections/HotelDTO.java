@@ -1,6 +1,7 @@
 package collections;
 
-import java.util.Objects;
+import java.util.List;
+
 
 public class HotelDTO implements Comparable<HotelDTO>{
 	
@@ -8,16 +9,26 @@ public class HotelDTO implements Comparable<HotelDTO>{
 	
 	private String hotelName;
 	
-	private int rating;
+	//private Map<String, Integer> menu;
+	private List<MenuDTO> menu;
+
+	public HotelDTO(int hotelId, String hotelName, List<MenuDTO> menu) {
+		super();
+		this.hotelId = hotelId;
+		this.hotelName = hotelName;
+		this.menu = menu;
+	}
 	
-	
-	
-	
+	public HotelDTO(int hotelId, String hotelName) {
+		super();
+		this.hotelId = hotelId;
+		this.hotelName = hotelName;
+	}
+
 	@Override
 	public int hashCode() {
 		return hotelId;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -28,67 +39,53 @@ public class HotelDTO implements Comparable<HotelDTO>{
 		if (getClass() != obj.getClass())
 			return false;
 		HotelDTO other = (HotelDTO) obj;
-		return hotelId == other.hotelId && Objects.equals(hotelName, other.hotelName) && rating == other.rating;
+		if (hotelId != other.hotelId)
+			return false;
+		if (hotelName == null) {
+			if (other.hotelName != null)
+				return false;
+		} else if (!hotelName.equals(other.hotelName))
+			return false;
+		return true;
 	}
 
-
-	public HotelDTO(int hotelId, String hotelName, int rating) {
-		super();
-		this.hotelId = hotelId;
-		this.hotelName = hotelName;
-		this.rating = rating;
-	}
-
-	
 	public HotelDTO() {
 		super();
-		
 	}
-	
-
 
 	public int getHotelId() {
 		return hotelId;
 	}
 
-
 	public void setHotelId(int hotelId) {
 		this.hotelId = hotelId;
 	}
-
 
 	public String getHotelName() {
 		return hotelName;
 	}
 
-
 	public void setHotelName(String hotelName) {
 		this.hotelName = hotelName;
 	}
 
-
-	public int getRating() {
-		return rating;
+	public List<MenuDTO> getMenu() {
+		return menu;
 	}
 
-
-	public void setRating(int rating) {
-		this.rating = rating;
+	public void setMenu(List<MenuDTO> menu) {
+		this.menu = menu;
 	}
-	
-	
-
 
 	@Override
 	public String toString() {
-		return "HotelDTO [hotelId=" + hotelId + ", hotelName=" + hotelName + ", rating=" + rating + "]";
+		return "HotelDTO [hotelId=" + hotelId + ", hotelName=" + hotelName + ", menu=" + menu + "]";
 	}
-
 
 	@Override
 	public int compareTo(HotelDTO o) {
 		
 		return this.hotelName.compareTo(o.getHotelName());
 	}
-
+	
 }
