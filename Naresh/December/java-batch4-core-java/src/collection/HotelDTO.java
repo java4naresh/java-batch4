@@ -1,13 +1,24 @@
 package collection;
 
+import java.util.List;
+import java.util.Map;
+
 public class HotelDTO implements Comparable<HotelDTO>{
 	
 	private int hotelId;
 	
 	private String hotelName;
 	
-	
+	//private Map<String, Integer> menu;
+	private List<MenuDTO> menu;
 
+	public HotelDTO(int hotelId, String hotelName, List<MenuDTO> menu) {
+		super();
+		this.hotelId = hotelId;
+		this.hotelName = hotelName;
+		this.menu = menu;
+	}
+	
 	public HotelDTO(int hotelId, String hotelName) {
 		super();
 		this.hotelId = hotelId;
@@ -58,9 +69,17 @@ public class HotelDTO implements Comparable<HotelDTO>{
 		this.hotelName = hotelName;
 	}
 
+	public List<MenuDTO> getMenu() {
+		return menu;
+	}
+
+	public void setMenu(List<MenuDTO> menu) {
+		this.menu = menu;
+	}
+
 	@Override
 	public String toString() {
-		return "HotelDTO [hotelId=" + hotelId + ", hotelName=" + hotelName + "]";
+		return "HotelDTO [hotelId=" + hotelId + ", hotelName=" + hotelName + ", menu=" + menu + "]";
 	}
 
 	@Override
