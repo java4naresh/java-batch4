@@ -24,24 +24,20 @@ public class WithOutGeneric {
 				int num = (Integer) numObj;
 				sum = sum + num;
 			} else if (numObj instanceof String) {
-
-				if (numObj != word) {
-					word = word + (String) numObj + ",";
-
-					word = word.substring(0, word.length() - 1);
-
+				if (!word.isEmpty()) {
+					word += ",";
 				}
-				// word = word +(String) numObj+",";
+				word += (String) numObj;
+				// word = word + (word.isEmpty() ? "" : ", ") + (String)numObj;
+				// word = word + " ," + (String)numObj ;
 
-			} /*
-				 * else if (numObj instanceof HotelDTO) { System.out.println(numObj); }
-				 */
+			} else if (numObj instanceof HotelDTO) {
+				System.out.println(numObj);
+			}
 
 		}
-		// System.out.println(sum);
-		// System.out.println(word);
-		// word = word.substring(0, word.length()-1);
-		System.out.println(word);
+		System.out.println(sum);
+		System.out.println(word.trim());
 
 	}
 

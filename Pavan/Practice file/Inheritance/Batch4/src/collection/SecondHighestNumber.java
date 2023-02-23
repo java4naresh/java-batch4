@@ -2,7 +2,7 @@ package collection;
 
 public class SecondHighestNumber {
 	public static void main(String[] args) {
-		int[] numbers = { 115, 20, 78, 97, 103, 95, 96 };
+		int[] numbers = { 115, 245, 78, 97, 103, 95, 96 };
 
 		int firstHighestNumber = 0;
 		int secondHighestNumber = 0;
@@ -16,12 +16,10 @@ public class SecondHighestNumber {
 				firstHighestNumber = numbers[i];
 			}
 
-			if (firstHighestNumber > numbers[i] && secondHighestNumber < numbers[i]) {
+			else if (secondHighestNumber < numbers[i]) {
+				thierdHighestNumber = secondHighestNumber;
 				secondHighestNumber = numbers[i];
-
-			}
-
-			if (secondHighestNumber > numbers[i] && thierdHighestNumber < numbers[i]) {
+			} else if (thierdHighestNumber < numbers[i]) {
 				thierdHighestNumber = numbers[i];
 			}
 
