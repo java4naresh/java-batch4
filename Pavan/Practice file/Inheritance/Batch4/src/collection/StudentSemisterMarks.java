@@ -337,20 +337,20 @@ public class StudentSemisterMarks {
 		studentMarks.put("Veerababu", veerababuSemister);
 		studentMarks.put("Vamsi", vamsiSemister);
 
-		// System.out.println(studentMarks);
+		//System.out.println(studentMarks);
 		// System.out.println(studentMarks.get("Pavan"));
 		// System.out.println(studentMarks.get("Naresh"));
 		// System.out.println(studentMarks.get("Vasavi"));
 		// System.out.println(studentMarks.get("Dhana Lakshmi"));
 		// System.out.println(studentMarks.get("Dhana Lakshmi"));
 		// System.out.println(studentMarks.get("Veerababu"));
-		// System.out.println(studentMarks.get("Vamsi"));
+		//System.out.println(studentMarks.get("Vamsi"));
 		// System.out.println(studentMarks.containsValue(pavanSemister));//True/False
 		// System.out.println(studentMarks.containsKey(pavanSemister));
 		// System.out.println(studentMarks.equals(pavanSemister));
 		// System.out.println(studentMarks.remove("Pavan", pavanSemister));//Remove method by using key and value
 		// System.out.println(studentMarks.size());// size of student marks
-		// System.out.println(studentMarks.toString());
+		 //System.out.println(studentMarks.toString());
 		System.out.println(studentMarks.keySet()); // return total keys
 
 	}

@@ -1,7 +1,9 @@
 package collection;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 public class HotelArrayList {
 	public static void main(String[] args) {
@@ -33,7 +35,7 @@ public class HotelArrayList {
 		hotels.add(hotel4);
 		hotels.add(hotel5);
 		System.out.println(hotels);
-		
+
 		// hotels.remove(new HotelDTO(1, "Udipi"));
 		// ArrayList<HotelDTO> hotels2 = new ArrayList<>();
 		// hotels2.add(new HotelDTO(1, "Udipi"));
