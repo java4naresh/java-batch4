@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 public class HotelHashMap {
 
@@ -37,9 +38,17 @@ public class HotelHashMap {
 		
 		HotelDTO hotel1 = new HotelDTO(1, "Annapurna", annapurnaMenu);
 		HotelDTO hotel2 = new HotelDTO(2, "Udipi", udipiMenu);
+		HotelDTO hotel3 = new HotelDTO(3, "Ragavendra", null);
 		hotels.put("Annapurna", hotel1);
 		hotels.put("Udipi", hotel2);
-		System.out.println(hotels);
+		hotels.put("Ragavendra", hotel3);
+		//System.out.println(hotels);
+		HotelDTO hotel = hotels.get("Ragavendra");
+		if(!Objects.isNull(hotel.getMenu())) {
+		for(MenuDTO menu : hotel.getMenu()) {
+			System.out.println(menu.getItemName());
+		}
+		}
 	}
 
 }
