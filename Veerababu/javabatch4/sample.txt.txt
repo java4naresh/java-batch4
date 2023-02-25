@@ -1,0 +1,10 @@
+1 Naresh Kambala M IT 50000 Hyderabad
+2 Naresh Kambala M Manager 50000 Guntur
+3 Naresh Kambala F HR 50000 Hyderabad
+4 Naresh Kambala M Marketing 70000 Vijayawada
+5 Naresh Kambala M IT 50000 Hyderabad
+6 Naresh Kambala M Devops 50000 Hyderabad
+7 Naresh Kambala F IT 50000 Hyderabad
+8 Naresh Kambala F IT 50000 Hyderabad
+9 Naresh Kambala M IT 50000 Hyderabad
+10 Naresh Kambala M IT 50000 Hyderabad
