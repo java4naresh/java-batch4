@@ -338,7 +338,7 @@ public class StudentSemisterMarks {
 		studentMarks.put("Vamsi", vamsiSemister);
 
 		//System.out.println(studentMarks);
-		// System.out.println(studentMarks.get("Pavan"));
+		 System.out.println(studentMarks.get("Pavan"));
 		// System.out.println(studentMarks.get("Naresh"));
 		// System.out.println(studentMarks.get("Vasavi"));
 		// System.out.println(studentMarks.get("Dhana Lakshmi"));
