@@ -57,7 +57,7 @@ public class StudentInformation {
 
 			Map<String, Map<String, Integer>> semesterMarks = new HashMap<>();
 			semesterMarks.put(studentSemester, subjectMarks);
-			// System.out.println(semistarMarks);
+			// System.out.println(semesterMarks);
 
 			Map<String, Map<String, Map<String, Integer>>> studentSemesterMarks = new HashMap<>();
 
