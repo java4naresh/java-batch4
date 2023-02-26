@@ -15,6 +15,8 @@ public class StudentInformation {
 		BufferedReader br = new BufferedReader(fr);
 		String marksList;
 
+		Map<String, Map<String, Map<String, Integer>>> studentSemesterMarks = new HashMap<>();
+
 		while ((marksList = br.readLine()) != null) {
 			String arry[] = marksList.split(" ");
 			String studentName = arry[0];
@@ -55,16 +57,20 @@ public class StudentInformation {
 			subjectMarks.put(studentSubject6, marks6);
 			// System.out.println(subjectMarks);
 
-			Map<String, Map<String, Integer>> semesterMarks = new HashMap<>();
-			semesterMarks.put(studentSemester, subjectMarks);
 			// System.out.println(semesterMarks);
 
-			Map<String, Map<String, Map<String, Integer>>> studentSemesterMarks = new HashMap<>();
+			if (studentSemesterMarks.get(studentName) == null) {
+				Map<String, Map<String, Integer>> semesterMarks = new HashMap<>();
+				semesterMarks.put(studentSemester, subjectMarks);
+				studentSemesterMarks.put(studentName, semesterMarks);
+			} else {
+				Map<String, Map<String, Integer>> semesterMarks = studentSemesterMarks.get(studentName);
+				semesterMarks.put(studentSemester, subjectMarks);
 
-			studentSemesterMarks.put(studentName, semesterMarks);
-			System.out.println(studentSemesterMarks);
+			}
 
 		}
+		System.out.println(studentSemesterMarks);
 
 	}
 
