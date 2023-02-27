@@ -5,6 +5,8 @@ import java.util.List;
 
 public class HotelDTO implements Comparable<HotelDTO>{
 	
+	
+
 	private int hotelId;
 	
 	private String hotelName;
