@@ -1,0 +1,16 @@
+Vasavi semister1  telugu-86 english-79 maths-90 physics-89 chemistry-65 social-80
+pavan semister1 telugu-86 english-79 maths-90 physics-89 chemistry-65 social-80
+dhanalakshmi semister1 telugu-86 english-79 maths-90 physics-89 chemistry-65 social-80
+naresh semister1 telugu-86 english-79 maths-90 physics-89 chemistry-65 social-80
+Vasavi semister2 telugu-86 english-79 maths-90 physics-89 chemistry-65 social-80
+pavan semister2 telugu-86 english-79 maths-90 physics-89 chemistry-65 social-80
+dhanalakshmi semister2 telugu-86 english-79 maths-90 physics-89 chemistry-65 social-80
+naresh semister2 telugu-86 english-79 maths-90 physics-89 chemistry-65 social-80
+Vasavi semister3 telugu-86 english-79 maths-90 physics-89 chemistry-65 social-80
+pavan semister3 telugu-86 english-79 maths-90 physics-89 chemistry-65 social-80
+dhanalakshmi semister3 telugu-86 english-79 maths-90 physics-89 chemistry-65 social-80
+naresh semister3 telugu-86 english-79 maths-90 physics-89 chemistry-65 social-80
+Vasavi semister4 telugu-86 english-79 maths-90 physics-89 chemistry-65 social-80
+pavan semister4 telugu-86 english-79 maths-90 physics-89 chemistry-65 social-80
+dhanalakshmi semister4 telugu-86 english-79 maths-90 physics-89 chemistry-65 social-80
+naresh semister4 telugu-86 english-79 maths-90 physics-89 chemistry-65 social-80
