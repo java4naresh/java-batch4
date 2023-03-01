@@ -10,7 +10,7 @@ public class JavaStudentHashmap {
 	public static void main(String[] args) {
 		Map<JavaStudent, List<String>> oppertunities = new HashMap<>();
 		JavaStudent student1 = new JavaStudent(1, "Naresh", 'M', "MTech", "Micro Services");
-		JavaStudent student2 = new JavaStudent(2, "Pavan", 'M', "BTech", "Spring Boot");
+		JavaStudent student2 = new JavaStudent(1, "Pavan", 'M', "BTech", "Spring Boot");
 		JavaStudent student3 = new JavaStudent(3, "Vamsi", 'M', "BTech", "Spring");
 		JavaStudent student4 = new JavaStudent(4, "Vasavi", 'F', "MCA", "Spring MVC");
 		JavaStudent student5 = new JavaStudent(5, "Dhanalaxmi", 'F', "MBA", "Fullstack");

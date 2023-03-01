@@ -12,7 +12,7 @@ public class JavaStudent {
 	
 	private String skill;
 	
-	@Override
+	/*@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -22,7 +22,11 @@ public class JavaStudent {
 		result = prime * result + ((qualification == null) ? 0 : qualification.hashCode());
 		result = prime * result + ((skill == null) ? 0 : skill.hashCode());
 		return result;
+	}*/
+	public int hashCode() {
+		return id;
 	}
+	
 	
 	/*@Override
 	public boolean equals(Object obj) {
