@@ -1,7 +1,5 @@
 package collections;
 
-import java.util.Objects;
-
 public class JavaStudent {
 	
 	private int id;
