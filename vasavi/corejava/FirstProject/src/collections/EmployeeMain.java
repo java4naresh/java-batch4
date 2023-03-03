@@ -31,7 +31,7 @@ public class EmployeeMain {
             int ptax = Integer.parseInt(fields[9]);
             int extra = Integer.parseInt(fields[10]);
             int totalWorkingDays = Integer.parseInt(fields[11]);
-            int perDaySalary = monthlySalary / totalWorkingDays;
+            int perDaySalary = monthlySalary / 30* totalWorkingDays;
 	      
 	
 		    EmpPaySlip payslip = new EmpPaySlip(empId, empFirstName, empLastName, month, totalAnnualSalary, basicSalary, allowance, monthlySalary, taxDeducted, salaryCredited, ptax, extra,totalWorkingDays,perDaySalary);
