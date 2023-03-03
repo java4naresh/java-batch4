@@ -53,7 +53,7 @@ public class HashMapExample {
 		capitals.put("Delhi", "Delhi");
 		capitals.put(null, "Goa");
 		capitals.put(null, "Poducherry");
-		//System.out.println(capitals);
+		System.out.println(capitals);
 		//System.out.println(capitals.get("MadyaPradesh"));
 		/*Set<String> keys = capitals.keySet();
 		Iterator<String> itr = keys.iterator();
@@ -61,15 +61,15 @@ public class HashMapExample {
 			String key = itr.next();
 			System.out.println(key+"="+capitals.get(key));
 		}*/
-		Set<Entry<String, String>> entries = capitals.entrySet();
-		Iterator<Entry<String, String>> entryItr = entries.iterator();
-		while(entryItr.hasNext()) {
-			Entry<String, String> entry = entryItr.next();
+		//Set<Entry<String, String>> entries = capitals.entrySet();
+		//Iterator<Entry<String, String>> entryItr = entries.iterator();
+		//while(entryItr.hasNext()) {
+		//	Entry<String, String> entry = entryItr.next();
 			//System.out.println(entry.getKey()+"="+entry.getValue());
-			if("Hyderabad".equals(entry.getValue())) {
-				System.out.println(entry.getKey());
-			}
-		}
+		//	if("Hyderabad".equals(entry.getValue())) {
+		//		System.out.println(entry.getKey());
+		//	}
+		//}
 		//Map<String, String> sortedMap = new HashMap<>();
 		
 	}
